@@ -1,6 +1,6 @@
 {
   "name": "hevy-mcp-unofficial",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Unofficial MCP server for Hevy: Trainer, Coach, private mobile API and public API endpoints, with session auto-refresh",
   "type": "module",
   "bin": {
@@ -32,6 +32,14 @@
   ],
   "author": "lovelesscx",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LovelessCodes/hevy-mcp-unofficial.git"
+  },
+  "homepage": "https://github.com/LovelessCodes/hevy-mcp-unofficial#readme",
+  "bugs": {
+    "url": "https://github.com/LovelessCodes/hevy-mcp-unofficial/issues"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.1"
   }
