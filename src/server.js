@@ -225,11 +225,17 @@ const TOOLS = [
     { openWorldHint: true },
     (a) => ({ raw: a })],
   ["hevy_search_endpoints",
-    "Search the full reverse-engineered Hevy endpoint inventory (328 entries: trainer, coach, mobile private, public v1).",
+    "Search the full reverse-engineered Hevy endpoint inventory (328 entries: trainer, coach, mobile private, public v1). Results include request body/query shapes where known (top-level for private endpoints, full schema for public API).",
     null, null,
     S({ query: { type: "string" }, group: { type: "string", enum: ["trainer", "coach", "mobile", "public"] }, limit: { type: "integer", default: 30 } }),
     { readOnlyHint: true },
     (a) => ({ search: a })],
+  ["hevy_endpoint_schema",
+    "Get one endpoint's details: verb, path, body keys, and the extracted request body/query shape (field names, nesting, param references). Call this before writing payloads to POST/PUT endpoints. Example: {verb:'PUT', path:'/v1/routines/{routineId}'}.",
+    null, null,
+    S({ verb: { type: "string", enum: ["GET", "POST", "PUT", "DELETE", "PATCH"] }, path: { type: "string" } }, ["verb", "path"]),
+    { readOnlyHint: true },
+    (a) => ({ schema: a })],
   ["hevy_auth_status",
     "Check session/api-key configuration (never returns token values, only presence + expiry).",
     null, null, S(), { readOnlyHint: true }, () => ({ authStatus: true })],
@@ -298,6 +304,24 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
       }
       return ok({ total: rows.length, results: rows.slice(0, limit) });
     }
+    if (name === "hevy_endpoint_schema") {
+      const { verb, path: p } = args;
+      const wanted = `${verb.toUpperCase()} ${p}`;
+      let row = null;
+      for (const [group, list] of Object.entries(INVENTORY.groups)) {
+        for (const e of list) {
+          if (`${e.verb} ${e.path}` === wanted || `${e.verb} ${e.path.replace(/\/$/, "")}` === wanted.replace(/\/$/, "")) {
+            row = { group, ...e };
+            break;
+          }
+        }
+        if (row) break;
+      }
+      if (!row) {
+        return { isError: true, content: [{ type: "text", text: `Not found: ${wanted}. Use hevy_search_endpoints to discover paths.` }] };
+      }
+      return ok({ ...row, modelsHint: INVENTORY.models ? `${Object.keys(INVENTORY.models).length} shared schemas (see hevy://endpoints models)` : undefined });
+    }
     if (name === "hevy_auth_status") {
       return ok(authStatus());
     }
@@ -339,7 +363,7 @@ function ok(r) {
 
 server.setRequestHandler(ListResourcesRequestSchema, async () => ({
   resources: [
-    { uri: "hevy://endpoints", name: "Endpoint inventory", description: "All discovered Hevy endpoints (trainer/coach/mobile/public)", mimeType: "application/json" },
+    { uri: "hevy://endpoints", name: "Endpoint inventory", description: `All discovered Hevy endpoints (trainer/coach/mobile/public) with request body/query shapes where extracted + ${INVENTORY.models ? Object.keys(INVENTORY.models).length : 0} shared OpenAPI schemas in the models section`, mimeType: "application/json" },
     { uri: "hevy://auth", name: "Auth status", description: "Session token / api key configuration status", mimeType: "application/json" },
   ],
 }));

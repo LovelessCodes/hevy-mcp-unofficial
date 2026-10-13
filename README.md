@@ -93,9 +93,36 @@ MCP client config (opencode / Claude Desktop style):
 - `hevy_*` — account, workouts, body measurements, key-values
 - `hevy_request` — raw call to any discovered endpoint (method/path/query/body)
 - `hevy_search_endpoints` — search the inventory by path/name/group
+- `hevy_endpoint_schema` — one endpoint's details incl. extracted body/query shape (use before writes)
 
 Write tools are annotated (`readOnlyHint` / `destructiveHint`); destructive ones act on
 real account data.
+
+## Endpoint inventory & payload shapes
+
+`src/endpoints.json` stores every discovered endpoint plus, where extractable, its request
+body / query shape (`bodyShape`, `queryShape`, `bodySource`):
+
+- **public `/v1`** — full request schemas from Hevy's official OpenAPI, plus 28 shared models
+  (`inv.models`: `PostWorkoutsRequestBody`, `PostRoutinesRequestBody`, `PutBodyMeasurement`, …)
+- **private mobile + trainer + coach** — top-level (occasionally nested) shapes extracted from
+  the Hevy Android Hermes bytecode via a mini-VM over the disassembly registers; values are
+  annotated (`<param:1>`, `<this>.field`, literals, enums)
+
+Check coverage before writing payloads:
+
+```
+hevy_endpoint_schema {verb:"POST", path:"/v2/workout"}
+hevy_search_endpoints {query:"create_program"}
+```
+
+Regenerate:
+
+```bash
+npm run build:endpoints   # route inventory from the extraction artifacts
+npm run build:payloads    # body/query shapes from the mobile disassembly (needs HEVY_HASM)
+npm run build:openapi     # full schemas for /v1 from api.hevyapp.com/docs
+```
 
 ## Regenerating the inventory
 

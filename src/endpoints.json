@@ -99,7 +99,11 @@
     "query": [
      "page",
      "pageSize"
-    ]
+    ],
+    "queryShape": {
+     "page": 0,
+     "pageSize": 0
+    }
    },
    {
     "source": "public",
@@ -117,13 +121,97 @@
     "source": "public",
     "name": "createWorkout",
     "verb": "POST",
-    "path": "/v1/workouts"
+    "path": "/v1/workouts",
+    "bodyShape": {
+     "workout": {
+      "title": "Friday Leg Day 🔥",
+      "description": "Medium intensity leg day focusing on quads.",
+      "start_time": "2024-08-14T12:00:00Z",
+      "end_time": "2024-08-14T12:30:00Z",
+      "is_private": false,
+      "exercises": [
+       {
+        "exercise_template_id": "D04AC939",
+        "superset_id": 0,
+        "notes": "Felt good today. Form was on point.",
+        "sets": [
+         {
+          "type": [
+           "warmup",
+           "normal",
+           "failure",
+           "dropset"
+          ],
+          "weight_kg": 100,
+          "reps": 10,
+          "distance_meters": 0,
+          "duration_seconds": 0,
+          "custom_metric": 0,
+          "rpe": [
+           6,
+           7,
+           7.5,
+           8,
+           8.5,
+           9,
+           9.5,
+           10
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "bodySource": "openapi"
    },
    {
     "source": "public",
     "name": "updateWorkout",
     "verb": "PUT",
-    "path": "/v1/workouts/{workoutId}"
+    "path": "/v1/workouts/{workoutId}",
+    "bodyShape": {
+     "workout": {
+      "title": "Friday Leg Day 🔥",
+      "description": "Medium intensity leg day focusing on quads.",
+      "start_time": "2024-08-14T12:00:00Z",
+      "end_time": "2024-08-14T12:30:00Z",
+      "is_private": false,
+      "exercises": [
+       {
+        "exercise_template_id": "D04AC939",
+        "superset_id": 0,
+        "notes": "Felt good today. Form was on point.",
+        "sets": [
+         {
+          "type": [
+           "warmup",
+           "normal",
+           "failure",
+           "dropset"
+          ],
+          "weight_kg": 100,
+          "reps": 10,
+          "distance_meters": 0,
+          "duration_seconds": 0,
+          "custom_metric": 0,
+          "rpe": [
+           6,
+           7,
+           7.5,
+           8,
+           8.5,
+           9,
+           9.5,
+           10
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "bodySource": "openapi"
    },
    {
     "source": "public",
@@ -134,7 +222,12 @@
      "since",
      "page",
      "pageSize"
-    ]
+    ],
+    "queryShape": {
+     "page": 0,
+     "pageSize": 0,
+     "since": "<string>"
+    }
    },
    {
     "source": "public",
@@ -144,7 +237,11 @@
     "query": [
      "page",
      "pageSize"
-    ]
+    ],
+    "queryShape": {
+     "page": 0,
+     "pageSize": 0
+    }
    },
    {
     "source": "public",
@@ -156,13 +253,83 @@
     "source": "public",
     "name": "createRoutine",
     "verb": "POST",
-    "path": "/v1/routines"
+    "path": "/v1/routines",
+    "bodyShape": {
+     "routine": {
+      "title": "April Leg Day 🔥",
+      "folder_id": 0,
+      "notes": "Focus on form over weight. Remember to stretch.",
+      "exercises": [
+       {
+        "exercise_template_id": "D04AC939",
+        "superset_id": 0,
+        "rest_seconds": 90,
+        "notes": "Stay slow and controlled.",
+        "sets": [
+         {
+          "type": [
+           "warmup",
+           "normal",
+           "failure",
+           "dropset"
+          ],
+          "weight_kg": 100,
+          "reps": 10,
+          "distance_meters": 0,
+          "duration_seconds": 0,
+          "custom_metric": 0,
+          "rep_range": {
+           "start": 8,
+           "end": 12
+          }
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "bodySource": "openapi"
    },
    {
     "source": "public",
     "name": "updateRoutine",
     "verb": "PUT",
-    "path": "/v1/routines/{routineId}"
+    "path": "/v1/routines/{routineId}",
+    "bodyShape": {
+     "routine": {
+      "title": "April Leg Day 🔥",
+      "folder_id": 0,
+      "notes": "Focus on form over weight. Remember to stretch.",
+      "exercises": [
+       {
+        "exercise_template_id": "D04AC939",
+        "superset_id": 0,
+        "rest_seconds": 90,
+        "notes": "Stay slow and controlled.",
+        "sets": [
+         {
+          "type": [
+           "warmup",
+           "normal",
+           "failure",
+           "dropset"
+          ],
+          "weight_kg": 100,
+          "reps": 10,
+          "distance_meters": 0,
+          "duration_seconds": 0,
+          "custom_metric": 0,
+          "rep_range": {
+           "start": 8,
+           "end": 12
+          }
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "bodySource": "openapi"
    },
    {
     "source": "public",
@@ -172,7 +339,11 @@
     "query": [
      "page",
      "pageSize"
-    ]
+    ],
+    "queryShape": {
+     "page": 0,
+     "pageSize": 0
+    }
    },
    {
     "source": "public",
@@ -188,7 +359,11 @@
     "query": [
      "page",
      "pageSize"
-    ]
+    ],
+    "queryShape": {
+     "page": 0,
+     "pageSize": 0
+    }
    },
    {
     "source": "public",
@@ -198,7 +373,11 @@
     "query": [
      "start_date",
      "end_date"
-    ]
+    ],
+    "queryShape": {
+     "start_date": "<string>",
+     "end_date": "<string>"
+    }
    },
    {
     "source": "public",
@@ -208,7 +387,11 @@
     "query": [
      "page",
      "pageSize"
-    ]
+    ],
+    "queryShape": {
+     "page": 0,
+     "pageSize": 0
+    }
    }
   ],
   "coach": [
@@ -370,7 +553,11 @@
     "bodyKeys": [
      "account"
     ],
-    "raw": "\"account\",{account:e}"
+    "raw": "\"account\",{account:e}",
+    "bodyShape": {
+     "account": "<param:1>"
+    },
+    "bodySource": "hermes:updateAccount"
    },
    {
     "source": "coach",
@@ -408,9 +595,15 @@
     "path": "/username",
     "params": [],
     "bodyKeys": [
-     "username"
+     "username",
+     "isInitialOnboardingUsername"
     ],
-    "raw": "\"username\",{username:e}"
+    "raw": "\"username\",{username:e}",
+    "bodyShape": {
+     "username": "<param:1>",
+     "isInitialOnboardingUsername": "<param:2>"
+    },
+    "bodySource": "hermes:updateUsername"
    },
    {
     "source": "coach",
@@ -421,7 +614,11 @@
     "bodyKeys": [
      "email"
     ],
-    "raw": "\"email\",{email:e}"
+    "raw": "\"email\",{email:e}",
+    "bodyShape": {
+     "email": "<param:1>"
+    },
+    "bodySource": "hermes:updateEmail"
    },
    {
     "source": "coach",
@@ -1585,7 +1782,9 @@
     "verb": "POST",
     "path": "/chat/presigned_url",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:getPresignedChatFileUrl"
    },
    {
     "source": "mobile",
@@ -1620,7 +1819,12 @@
     "bodyKeys": [
      "conversation_id",
      "last_read_message_id"
-    ]
+    ],
+    "bodyShape": {
+     "conversation_id": "<param:1>",
+     "last_read_message_id": "<param:2>"
+    },
+    "bodySource": "hermes:postSetConversationLastRead"
    },
    {
     "source": "mobile",
@@ -1630,7 +1834,14 @@
     "params": [],
     "bodyKeys": [
      "conversation_user_ids"
-    ]
+    ],
+    "bodyShape": {
+     "conversation_user_ids": [
+      "<param:1>",
+      "<param:2>"
+     ]
+    },
+    "bodySource": "hermes:postCreateConversation"
    },
    {
     "source": "mobile",
@@ -1649,7 +1860,12 @@
     "bodyKeys": [
      "messages_deleted_since_time",
      "conversation_id"
-    ]
+    ],
+    "bodyShape": {
+     "messages_deleted_since_time": "<param:2>",
+     "conversation_id": "<param:1>"
+    },
+    "bodySource": "hermes:postGetDeletedMessagesInConversation"
    },
    {
     "source": "mobile",
@@ -1673,7 +1889,9 @@
     "verb": "POST",
     "path": "/message",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:createMessage"
    },
    {
     "source": "mobile",
@@ -1685,7 +1903,13 @@
      "less_than_index",
      "conversation_id",
      "limit"
-    ]
+    ],
+    "bodyShape": {
+     "less_than_index": "<param:3>",
+     "conversation_id": "<param:2>",
+     "limit": "<param:1>"
+    },
+    "bodySource": "hermes:postGetMessagesInConversation"
    },
    {
     "source": "mobile",
@@ -1711,7 +1935,11 @@
     "params": [],
     "bodyKeys": [
      "email"
-    ]
+    ],
+    "bodyShape": {
+     "email": "<this>.email"
+    },
+    "bodySource": "hermes:sendSignupVerificationEmail"
    },
    {
     "source": "mobile",
@@ -1731,10 +1959,21 @@
      "username",
      "email",
      "password",
+     "recaptchaToken",
      "acceptedTerms",
      "gympassUserId",
-     "verificationCode"
-    ]
+     "useAuth2_0"
+    ],
+    "bodyShape": {
+     "username": "<this>.username",
+     "email": "<this>.email",
+     "password": "<this>.password",
+     "recaptchaToken": "<this>.recaptchaToken",
+     "acceptedTerms": "<this>.acceptedTerms",
+     "gympassUserId": "<this>.gympassUserId",
+     "useAuth2_0": true
+    },
+    "bodySource": "hermes:signup"
    },
    {
     "source": "mobile",
@@ -1776,7 +2015,11 @@
     "params": [],
     "bodyKeys": [
      "code"
-    ]
+    ],
+    "bodyShape": {
+     "code": "<param:1>"
+    },
+    "bodySource": "hermes:postVerifyEmailAddress"
    },
    {
     "source": "mobile",
@@ -1794,7 +2037,11 @@
     "params": [],
     "bodyKeys": [
      "requestId"
-    ]
+    ],
+    "bodyShape": {
+     "requestId": "<param:1>"
+    },
+    "bodySource": "hermes:acceptFollowRequest"
    },
    {
     "source": "mobile",
@@ -1810,7 +2057,9 @@
     "verb": "POST",
     "path": "/app_log",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:postAppLog"
    },
    {
     "source": "mobile",
@@ -1820,7 +2069,11 @@
     "params": [],
     "bodyKeys": [
      "platform"
-    ]
+    ],
+    "bodyShape": {
+     "platform": "<param:1>"
+    },
+    "bodySource": "hermes:createLinkedSession"
    },
    {
     "source": "mobile",
@@ -1886,7 +2139,11 @@
     "params": [],
     "bodyKeys": [
      "measurementsBatch"
-    ]
+    ],
+    "bodyShape": {
+     "measurementsBatch": "<param:1>"
+    },
+    "bodySource": "hermes:postBodyMeasurementsBatch"
    },
    {
     "source": "mobile",
@@ -1894,7 +2151,9 @@
     "verb": "POST",
     "path": "/bug-report",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:postBugReport"
    },
    {
     "source": "mobile",
@@ -1902,7 +2161,9 @@
     "verb": "POST",
     "path": "/check_facebook_migration_status",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:checkFacebookMigrationStatus"
    },
    {
     "source": "mobile",
@@ -1969,7 +2230,12 @@
     "bodyKeys": [
      "phone_number",
      "verification_code"
-    ]
+    ],
+    "bodyShape": {
+     "phone_number": "<param:1>",
+     "verification_code": "<param:2>"
+    },
+    "bodySource": "hermes:verifyPhoneNumber"
    },
    {
     "source": "mobile",
@@ -1987,7 +2253,11 @@
     "params": [],
     "bodyKeys": [
      "exercise"
-    ]
+    ],
+    "bodyShape": {
+     "exercise": "<param:1>"
+    },
+    "bodySource": "hermes:postCustomExerciseTemplate"
    },
    {
     "source": "mobile",
@@ -2038,7 +2308,12 @@
     "bodyKeys": [
      "barId",
      "exerciseTemplateId"
-    ]
+    ],
+    "bodyShape": {
+     "barId": "<this>.barId",
+     "exerciseTemplateId": "<this>.exerciseTemplateId"
+    },
+    "bodySource": "hermes:updatePreferedBarPreference"
    },
    {
     "source": "mobile",
@@ -2062,7 +2337,9 @@
     "verb": "POST",
     "path": "/exercise_template_unit",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:postExerciseTemplateUnit"
    },
    {
     "source": "mobile",
@@ -2094,7 +2371,9 @@
     "verb": "GET",
     "path": "/feed_workouts_paged/",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "queryShape": "<param:2>",
+    "querySource": "hermes:getFeedPaged"
    },
    {
     "source": "mobile",
@@ -2158,7 +2437,9 @@
     "verb": "GET",
     "path": "/generate_204",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "queryShape": "<param:1>",
+    "querySource": "hermes:getGenerate204"
    },
    {
     "source": "mobile",
@@ -2168,7 +2449,11 @@
     "params": [],
     "bodyKeys": [
      "contacts"
-    ]
+    ],
+    "bodyShape": {
+     "contacts": "<param:1>"
+    },
+    "bodySource": "hermes:getUsersFromContacts"
    },
    {
     "source": "mobile",
@@ -2176,7 +2461,9 @@
     "verb": "POST",
     "path": "/get_users_from_facebook_friends",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:getUsersFromFacebookFriends"
    },
    {
     "source": "mobile",
@@ -2186,7 +2473,11 @@
     "params": [],
     "bodyKeys": [
      "params"
-    ]
+    ],
+    "queryShape": {
+     "params": "<param:1>"
+    },
+    "querySource": "hermes:?anon_0_"
    },
    {
     "source": "mobile",
@@ -2204,7 +2495,11 @@
     "params": [],
     "bodyKeys": [
      "params"
-    ]
+    ],
+    "queryShape": {
+     "params": "<param:1>"
+    },
+    "querySource": "hermes:?anon_0_"
    },
    {
     "source": "mobile",
@@ -2268,7 +2563,9 @@
     "verb": "POST",
     "path": "/hevy_trainer/user_preferences",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:postTrainerUserPreferences"
    },
    {
     "source": "mobile",
@@ -2288,7 +2585,14 @@
      "client_program_updated_at",
      "client_next_workout_updated_at",
      "params"
-    ]
+    ],
+    "queryShape": {
+     "params": {
+      "client_program_updated_at": "<param:1>",
+      "client_next_workout_updated_at": "<param:2>"
+     }
+    },
+    "querySource": "hermes:getTrainerProgram"
    },
    {
     "source": "mobile",
@@ -2299,7 +2603,12 @@
     "bodyKeys": [
      "program",
      "deleteActiveProgram"
-    ]
+    ],
+    "bodyShape": {
+     "program": "<param:1>",
+     "deleteActiveProgram": "<param:2>"
+    },
+    "bodySource": "hermes:postTrainerProgram"
    },
    {
     "source": "mobile",
@@ -2309,7 +2618,11 @@
     "params": [],
     "bodyKeys": [
      "program"
-    ]
+    ],
+    "bodyShape": {
+     "program": "<this>.program"
+    },
+    "bodySource": "hermes:?anon_0_"
    },
    {
     "source": "mobile",
@@ -2325,7 +2638,9 @@
     "verb": "POST",
     "path": "/import_data",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:importWorkoutData"
    },
    {
     "source": "mobile",
@@ -2357,7 +2672,11 @@
     "verb": "GET",
     "path": "/isVolumeDoublingEnabledForAllExercisesByDefault",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "queryShape": [
+     "<item>"
+    ],
+    "querySource": "hermes:Mn"
    },
    {
     "source": "mobile",
@@ -2373,7 +2692,9 @@
     "verb": "POST",
     "path": "/link_social_account",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:linkSocialAccount"
    },
    {
     "source": "mobile",
@@ -2383,7 +2704,11 @@
     "params": [],
     "bodyKeys": [
      "gympassUserId"
-    ]
+    ],
+    "bodyShape": {
+     "gympassUserId": "<this>.gympassUserId"
+    },
+    "bodySource": "hermes:linkUserWithGympass"
    },
    {
     "source": "mobile",
@@ -2394,7 +2719,12 @@
     "bodyKeys": [
      "workout_id",
      "comment"
-    ]
+    ],
+    "bodyShape": {
+     "workout_id": "<param:1>",
+     "comment": "<param:2>"
+    },
+    "bodySource": "hermes:postLiveWorkoutComment"
    },
    {
     "source": "mobile",
@@ -2403,9 +2733,14 @@
     "path": "/live_workout_viewer",
     "params": [],
     "bodyKeys": [
-     "workout_id",
      "data"
-    ]
+    ],
+    "bodyShape": {
+     "data": {
+      "workout_id": "<param:1>"
+     }
+    },
+    "bodySource": "hermes:deleteLiveWorkout"
    },
    {
     "source": "mobile",
@@ -2415,7 +2750,11 @@
     "params": [],
     "bodyKeys": [
      "workout_id"
-    ]
+    ],
+    "bodyShape": {
+     "workout_id": "<param:1>"
+    },
+    "bodySource": "hermes:postLiveWorkoutViewer"
    },
    {
     "source": "mobile",
@@ -2424,9 +2763,20 @@
     "path": "/login_with_saved_account",
     "params": [],
     "bodyKeys": [
-     "userId",
-     "secret"
-    ]
+     "emailOrUsername",
+     "password",
+     "useAuth2_0",
+     "recaptchaToken",
+     "gympassUserId"
+    ],
+    "bodyShape": {
+     "emailOrUsername": "<param:1>",
+     "password": "<param:2>",
+     "useAuth2_0": true,
+     "recaptchaToken": "<param:3>",
+     "gympassUserId": "<param:4>"
+    },
+    "bodySource": "hermes:login"
    },
    {
     "source": "mobile",
@@ -2434,7 +2784,9 @@
     "verb": "POST",
     "path": "/migrate_facebook_login_to_password_login",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:migrateFacebookLoginToPasswordLogin"
    },
    {
     "source": "mobile",
@@ -2458,7 +2810,9 @@
     "verb": "POST",
     "path": "/network_info",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:postNetworkInfo"
    },
    {
     "source": "mobile",
@@ -2474,7 +2828,9 @@
     "verb": "POST",
     "path": "/plate_calculator_bar",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:postPlateCalculatorBar"
    },
    {
     "source": "mobile",
@@ -2498,7 +2854,9 @@
     "verb": "POST",
     "path": "/plate_calculator_plate",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:postPlateCalculatorPlate"
    },
    {
     "source": "mobile",
@@ -2538,7 +2896,9 @@
     "verb": "PUT",
     "path": "/push_notification_settings",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:updateUserPushNotificationSettings"
    },
    {
     "source": "mobile",
@@ -2548,7 +2908,11 @@
     "params": [],
     "bodyKeys": [
      "email"
-    ]
+    ],
+    "bodyShape": {
+     "email": "<param:1>"
+    },
+    "bodySource": "hermes:generatePasswordRecoveryEmail"
    },
    {
     "source": "mobile",
@@ -2556,7 +2920,9 @@
     "verb": "POST",
     "path": "/request_password_recovery_for_facebook_migration",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:requestPasswordRecoveryForFacebookMigration"
    },
    {
     "source": "mobile",
@@ -2566,7 +2932,11 @@
     "params": [],
     "bodyKeys": [
      "phone_number"
-    ]
+    ],
+    "bodyShape": {
+     "phone_number": "<param:1>"
+    },
+    "bodySource": "hermes:requestVerificationSMS"
    },
    {
     "source": "mobile",
@@ -2590,7 +2960,13 @@
     "verb": "PUT",
     "path": "/routine/",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [
+     "routine"
+    ],
+    "bodyShape": {
+     "routine": "<param:2>"
+    },
+    "bodySource": "hermes:updateRoutine"
    },
    {
     "source": "mobile",
@@ -2598,7 +2974,9 @@
     "verb": "POST",
     "path": "/routine_copy",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:postRoutineCopy"
    },
    {
     "source": "mobile",
@@ -2608,7 +2986,11 @@
     "params": [],
     "bodyKeys": [
      "folder"
-    ]
+    ],
+    "bodyShape": {
+     "folder": "<param:1>"
+    },
+    "bodySource": "hermes:postRoutineFolder"
    },
    {
     "source": "mobile",
@@ -2616,7 +2998,9 @@
     "verb": "PUT",
     "path": "/routine_folder",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:updateRoutineFolder"
    },
    {
     "source": "mobile",
@@ -2634,7 +3018,11 @@
     "params": [],
     "bodyKeys": [
      "reorders"
-    ]
+    ],
+    "bodyShape": {
+     "reorders": "<param:1>"
+    },
+    "bodySource": "hermes:updateRoutineFolderOrder"
    },
    {
     "source": "mobile",
@@ -2644,7 +3032,11 @@
     "params": [],
     "bodyKeys": [
      "locations"
-    ]
+    ],
+    "bodyShape": {
+     "locations": "<param:1>"
+    },
+    "bodySource": "hermes:updateRoutineLocations"
    },
    {
     "source": "mobile",
@@ -2660,7 +3052,13 @@
     "verb": "POST",
     "path": "/routines_sync_batch",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [
+     "routine"
+    ],
+    "bodyShape": {
+     "routine": "<param:1>"
+    },
+    "bodySource": "hermes:postRoutine"
    },
    {
     "source": "mobile",
@@ -2710,7 +3108,11 @@
     "params": [],
     "bodyKeys": [
      "authorizationCode"
-    ]
+    ],
+    "bodyShape": {
+     "authorizationCode": "<param:1>"
+    },
+    "bodySource": "hermes:connectStrava"
    },
    {
     "source": "mobile",
@@ -2720,7 +3122,11 @@
     "params": [],
     "bodyKeys": [
      "params"
-    ]
+    ],
+    "queryShape": {
+     "params": "<param:1>"
+    },
+    "querySource": "hermes:getStrengthLevel"
    },
    {
     "source": "mobile",
@@ -2728,7 +3134,9 @@
     "verb": "POST",
     "path": "/submit_email_for_facebook_login_migration",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:submitEmailForFacebookLoginMigration"
    },
    {
     "source": "mobile",
@@ -2762,7 +3170,11 @@
     "params": [],
     "bodyKeys": [
      "password"
-    ]
+    ],
+    "bodyShape": {
+     "password": "<param:1>"
+    },
+    "bodySource": "hermes:updatePassword"
    },
    {
     "source": "mobile",
@@ -2794,7 +3206,9 @@
     "verb": "PUT",
     "path": "/user_key_values",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:updateUserKeyValues"
    },
    {
     "source": "mobile",
@@ -2802,7 +3216,9 @@
     "verb": "POST",
     "path": "/user_metadata",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:postUserMetadata"
    },
    {
     "source": "mobile",
@@ -2810,7 +3226,9 @@
     "verb": "PUT",
     "path": "/user_preferences",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:updateUserPreferences"
    },
    {
     "source": "mobile",
@@ -2834,7 +3252,9 @@
     "verb": "POST",
     "path": "/user_training_intent",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:postUserTrainingIntent"
    },
    {
     "source": "mobile",
@@ -2850,7 +3270,9 @@
     "verb": "POST",
     "path": "/user_warmup_calculator_data",
     "params": [],
-    "bodyKeys": []
+    "bodyKeys": [],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:postUserWarmupCalculatorData"
    },
    {
     "source": "mobile",
@@ -2860,7 +3282,11 @@
     "params": [],
     "bodyKeys": [
      "params"
-    ]
+    ],
+    "queryShape": {
+     "params": "<param:1>"
+    },
+    "querySource": "hermes:getUserWorkoutsPaged"
    },
    {
     "source": "mobile",
@@ -2879,7 +3305,12 @@
     "bodyKeys": [
      "feedback",
      "replyToEmail"
-    ]
+    ],
+    "bodyShape": {
+     "feedback": "<param:1>",
+     "replyToEmail": "<param:2>"
+    },
+    "bodySource": "hermes:postFeedback"
    },
    {
     "source": "mobile",
@@ -2898,7 +3329,12 @@
     "bodyKeys": [
      "workout",
      "share_to_strava"
-    ]
+    ],
+    "bodyShape": {
+     "workout": "<this>.workout",
+     "share_to_strava": "<this>.share_to_strava"
+    },
+    "bodySource": "hermes:postWorkout"
    },
    {
     "source": "mobile",
@@ -2916,7 +3352,11 @@
     "params": [],
     "bodyKeys": [
      "authToken"
-    ]
+    ],
+    "bodyShape": {
+     "authToken": "<param:1>"
+    },
+    "bodySource": "hermes:validateAuthToken"
    },
    {
     "source": "mobile",
@@ -2976,7 +3416,13 @@
      "workoutId",
      "comment",
      "replyingToCommentId"
-    ]
+    ],
+    "bodyShape": {
+     "workoutId": "<param:1>",
+     "comment": "<param:2>",
+     "replyingToCommentId": "<param:3>"
+    },
+    "bodySource": "hermes:postWorkoutComment"
    },
    {
     "source": "mobile",
@@ -3050,7 +3496,9 @@
     "params": [],
     "bodyKeys": [
      "last_sync_timestamp"
-    ]
+    ],
+    "bodyShape": "<param:1>",
+    "bodySource": "hermes:getWorkoutsSync"
    },
    {
     "source": "mobile",
@@ -3074,5 +3522,643 @@
     ]
    }
   ]
- }
+ },
+ "models": {
+  "PostWorkoutsRequestSet": {
+   "type": [
+    "warmup",
+    "normal",
+    "failure",
+    "dropset"
+   ],
+   "weight_kg": 100,
+   "reps": 10,
+   "distance_meters": 0,
+   "duration_seconds": 0,
+   "custom_metric": 0,
+   "rpe": [
+    6,
+    7,
+    7.5,
+    8,
+    8.5,
+    9,
+    9.5,
+    10
+   ]
+  },
+  "PostWorkoutsRequestExercise": {
+   "exercise_template_id": "D04AC939",
+   "superset_id": 0,
+   "notes": "Felt good today. Form was on point.",
+   "sets": [
+    {
+     "type": [
+      "warmup",
+      "normal",
+      "failure",
+      "dropset"
+     ],
+     "weight_kg": 100,
+     "reps": 10,
+     "distance_meters": 0,
+     "duration_seconds": 0,
+     "custom_metric": 0,
+     "rpe": [
+      6,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10
+     ]
+    }
+   ]
+  },
+  "PostWorkoutsRequestBody": {
+   "workout": {
+    "title": "Friday Leg Day 🔥",
+    "description": "Medium intensity leg day focusing on quads.",
+    "start_time": "2024-08-14T12:00:00Z",
+    "end_time": "2024-08-14T12:30:00Z",
+    "is_private": false,
+    "exercises": [
+     {
+      "exercise_template_id": "D04AC939",
+      "superset_id": 0,
+      "notes": "Felt good today. Form was on point.",
+      "sets": [
+       {
+        "type": [
+         "warmup",
+         "normal",
+         "failure",
+         "dropset"
+        ],
+        "weight_kg": 100,
+        "reps": 10,
+        "distance_meters": 0,
+        "duration_seconds": 0,
+        "custom_metric": 0,
+        "rpe": [
+         6,
+         7,
+         7.5,
+         8,
+         8.5,
+         9,
+         9.5,
+         10
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "PostRoutinesRequestSet": {
+   "type": [
+    "warmup",
+    "normal",
+    "failure",
+    "dropset"
+   ],
+   "weight_kg": 100,
+   "reps": 10,
+   "distance_meters": 0,
+   "duration_seconds": 0,
+   "custom_metric": 0,
+   "rep_range": {
+    "start": 8,
+    "end": 12
+   }
+  },
+  "PostRoutinesRequestExercise": {
+   "exercise_template_id": "D04AC939",
+   "superset_id": 0,
+   "rest_seconds": 90,
+   "notes": "Stay slow and controlled.",
+   "sets": [
+    {
+     "type": [
+      "warmup",
+      "normal",
+      "failure",
+      "dropset"
+     ],
+     "weight_kg": 100,
+     "reps": 10,
+     "distance_meters": 0,
+     "duration_seconds": 0,
+     "custom_metric": 0,
+     "rep_range": {
+      "start": 8,
+      "end": 12
+     }
+    }
+   ]
+  },
+  "PostRoutinesRequestBody": {
+   "routine": {
+    "title": "April Leg Day 🔥",
+    "folder_id": 0,
+    "notes": "Focus on form over weight. Remember to stretch.",
+    "exercises": [
+     {
+      "exercise_template_id": "D04AC939",
+      "superset_id": 0,
+      "rest_seconds": 90,
+      "notes": "Stay slow and controlled.",
+      "sets": [
+       {
+        "type": [
+         "warmup",
+         "normal",
+         "failure",
+         "dropset"
+        ],
+        "weight_kg": 100,
+        "reps": 10,
+        "distance_meters": 0,
+        "duration_seconds": 0,
+        "custom_metric": 0,
+        "rep_range": {
+         "start": 8,
+         "end": 12
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "PutRoutinesRequestSet": {
+   "type": [
+    "warmup",
+    "normal",
+    "failure",
+    "dropset"
+   ],
+   "weight_kg": 100,
+   "reps": 10,
+   "distance_meters": 0,
+   "duration_seconds": 0,
+   "custom_metric": 0,
+   "rep_range": {
+    "start": 8,
+    "end": 12
+   }
+  },
+  "PutRoutinesRequestExercise": {
+   "exercise_template_id": "D04AC939",
+   "superset_id": 0,
+   "rest_seconds": 90,
+   "notes": "Stay slow and controlled.",
+   "sets": [
+    {
+     "type": [
+      "warmup",
+      "normal",
+      "failure",
+      "dropset"
+     ],
+     "weight_kg": 100,
+     "reps": 10,
+     "distance_meters": 0,
+     "duration_seconds": 0,
+     "custom_metric": 0,
+     "rep_range": {
+      "start": 8,
+      "end": 12
+     }
+    }
+   ]
+  },
+  "PutRoutinesRequestBody": {
+   "routine": {
+    "title": "April Leg Day 🔥",
+    "folder_id": 0,
+    "notes": "Focus on form over weight. Remember to stretch.",
+    "exercises": [
+     {
+      "exercise_template_id": "D04AC939",
+      "superset_id": 0,
+      "rest_seconds": 90,
+      "notes": "Stay slow and controlled.",
+      "sets": [
+       {
+        "type": [
+         "warmup",
+         "normal",
+         "failure",
+         "dropset"
+        ],
+        "weight_kg": 100,
+        "reps": 10,
+        "distance_meters": 0,
+        "duration_seconds": 0,
+        "custom_metric": 0,
+        "rep_range": {
+         "start": 8,
+         "end": 12
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "PostRoutineFolderRequestBody": {
+   "routine_folder": {
+    "title": "Push Pull 🏋️‍♂️"
+   }
+  },
+  "BodyMeasurement": {
+   "date": "<YYYY-MM-DD>",
+   "weight_kg": 80.5,
+   "lean_mass_kg": 65,
+   "fat_percent": 18.5,
+   "neck_cm": 38,
+   "shoulder_cm": 115,
+   "chest_cm": 95,
+   "left_bicep_cm": 35,
+   "right_bicep_cm": 35.5,
+   "left_forearm_cm": 28,
+   "right_forearm_cm": 28.5,
+   "abdomen": 85,
+   "waist": 80,
+   "hips": 95,
+   "left_thigh": 55,
+   "right_thigh": 55.5,
+   "left_calf": 37,
+   "right_calf": 37.5
+  },
+  "PutBodyMeasurement": {
+   "weight_kg": 80.5,
+   "lean_mass_kg": 65,
+   "fat_percent": 18.5,
+   "neck_cm": 38,
+   "shoulder_cm": 115,
+   "chest_cm": 95,
+   "left_bicep_cm": 35,
+   "right_bicep_cm": 35.5,
+   "left_forearm_cm": 28,
+   "right_forearm_cm": 28.5,
+   "abdomen": 85,
+   "waist": 80,
+   "hips": 95,
+   "left_thigh": 55,
+   "right_thigh": 55.5,
+   "left_calf": 37,
+   "right_calf": 37.5
+  },
+  "Set": {
+   "index": 0,
+   "type": "normal",
+   "weight_kg": 100,
+   "reps": 10,
+   "distance_meters": 0,
+   "duration_seconds": 0,
+   "rpe": 9.5,
+   "custom_metric": 50
+  },
+  "Exercise": {
+   "index": 0,
+   "title": "Bench Press (Barbell)",
+   "notes": "Paid closer attention to form today. Felt great!",
+   "exercise_template_id": "05293BCA",
+   "superset_id": 0,
+   "sets": [
+    {
+     "index": 0,
+     "type": "normal",
+     "weight_kg": 100,
+     "reps": 10,
+     "distance_meters": 0,
+     "duration_seconds": 0,
+     "rpe": 9.5,
+     "custom_metric": 50
+    }
+   ]
+  },
+  "ExerciseHistoryEntry": {
+   "workout_id": "b459cba5-cd6d-463c-abd6-54f8eafcadcb",
+   "workout_title": "Morning Workout 💪",
+   "workout_start_time": "2024-01-01T12:00:00Z",
+   "workout_end_time": "2024-01-01T13:00:00Z",
+   "exercise_template_id": "D04AC939",
+   "weight_kg": 100,
+   "reps": 10,
+   "distance_meters": 0,
+   "duration_seconds": 0,
+   "rpe": 8.5,
+   "custom_metric": 0,
+   "set_type": "normal"
+  },
+  "CustomExerciseType": [
+   "weight_reps",
+   "reps_only",
+   "bodyweight_reps",
+   "bodyweight_assisted_reps",
+   "duration",
+   "weight_duration",
+   "distance_duration",
+   "short_distance_weight"
+  ],
+  "MuscleGroup": [
+   "abdominals",
+   "shoulders",
+   "biceps",
+   "triceps",
+   "forearms",
+   "quadriceps",
+   "hamstrings",
+   "calves",
+   "glutes",
+   "abductors",
+   "adductors",
+   "lats",
+   "upper_back",
+   "traps",
+   "lower_back",
+   "chest",
+   "cardio",
+   "neck",
+   "full_body",
+   "other"
+  ],
+  "EquipmentCategory": [
+   "none",
+   "barbell",
+   "dumbbell",
+   "kettlebell",
+   "machine",
+   "plate",
+   "resistance_band",
+   "suspension",
+   "other"
+  ],
+  "ExerciseTemplate": {
+   "id": "b459cba5-cd6d-463c-abd6-54f8eafcadcb",
+   "title": "Bench Press (Barbell)",
+   "type": "weight_reps",
+   "primary_muscle_group": "chest",
+   "secondary_muscle_groups": [
+    "<string>"
+   ],
+   "equipment": [
+    "none",
+    "barbell",
+    "dumbbell",
+    "kettlebell",
+    "machine",
+    "plate",
+    "resistance_band",
+    "suspension",
+    "other"
+   ],
+   "is_custom": false,
+   "thumbnail_url": "<string>"
+  },
+  "CreateCustomExerciseRequestBody": {
+   "exercise": {
+    "title": "Bench Press",
+    "exercise_type": [
+     "weight_reps",
+     "reps_only",
+     "bodyweight_reps",
+     "bodyweight_assisted_reps",
+     "duration",
+     "weight_duration",
+     "distance_duration",
+     "short_distance_weight"
+    ],
+    "equipment_category": [
+     "none",
+     "barbell",
+     "dumbbell",
+     "kettlebell",
+     "machine",
+     "plate",
+     "resistance_band",
+     "suspension",
+     "other"
+    ],
+    "muscle_group": [
+     "abdominals",
+     "shoulders",
+     "biceps",
+     "triceps",
+     "forearms",
+     "quadriceps",
+     "hamstrings",
+     "calves",
+     "glutes",
+     "abductors",
+     "adductors",
+     "lats",
+     "upper_back",
+     "traps",
+     "lower_back",
+     "chest",
+     "cardio",
+     "neck",
+     "full_body",
+     "other"
+    ],
+    "other_muscles": [
+     "<recursive>"
+    ]
+   }
+  },
+  "RoutineFolder": {
+   "id": 42,
+   "index": 1,
+   "title": "Push Pull 🏋️‍♂️",
+   "updated_at": "2021-09-14T12:00:00Z",
+   "created_at": "2021-09-14T12:00:00Z"
+  },
+  "Routine": {
+   "id": "b459cba5-cd6d-463c-abd6-54f8eafcadcb",
+   "title": "Upper Body 💪",
+   "folder_id": 42,
+   "updated_at": "2021-09-14T12:00:00Z",
+   "created_at": "2021-09-14T12:00:00Z",
+   "exercises": [
+    {
+     "index": 0,
+     "title": "Bench Press (Barbell)",
+     "rest_seconds": 60,
+     "notes": "Focus on form. Go down to 90 degrees.",
+     "exercise_template_id": "05293BCA",
+     "superset_id": 0,
+     "sets": [
+      {
+       "index": 0,
+       "type": "normal",
+       "weight_kg": 100,
+       "reps": 10,
+       "rep_range": {
+        "start": 8,
+        "end": 12
+       },
+       "distance_meters": 0,
+       "duration_seconds": 0,
+       "custom_metric": 50
+      }
+     ]
+    }
+   ]
+  },
+  "UserInfo": {
+   "id": "9c465af3-de7d-42bc-9c7c-f0170396358b",
+   "username": "jhon",
+   "name": "John doe",
+   "url": "https://hevy.com/user/jhon",
+   "weight_unit": [
+    "kg",
+    "lbs"
+   ],
+   "distance_unit": [
+    "kilometers",
+    "miles"
+   ]
+  },
+  "UserInfoResponse": {
+   "data": {
+    "id": "9c465af3-de7d-42bc-9c7c-f0170396358b",
+    "username": "jhon",
+    "name": "John doe",
+    "url": "https://hevy.com/user/jhon",
+    "weight_unit": [
+     "kg",
+     "lbs"
+    ],
+    "distance_unit": [
+     "kilometers",
+     "miles"
+    ]
+   }
+  },
+  "Workout": {
+   "id": "b459cba5-cd6d-463c-abd6-54f8eafcadcb",
+   "title": "Morning Workout 💪",
+   "routine_id": "b459cba5-cd6d-463c-abd6-54f8eafcadcb",
+   "description": "Pushed myself to the limit today!",
+   "start_time": "2021-09-14T12:00:00Z",
+   "end_time": "2021-09-14T12:00:00Z",
+   "updated_at": "2021-09-14T12:00:00Z",
+   "created_at": "2021-09-14T12:00:00Z",
+   "exercises": [
+    {
+     "index": 0,
+     "title": "Bench Press (Barbell)",
+     "notes": "Paid closer attention to form today. Felt great!",
+     "exercise_template_id": "05293BCA",
+     "superset_id": 0,
+     "sets": [
+      {
+       "index": 0,
+       "type": "normal",
+       "weight_kg": 100,
+       "reps": 10,
+       "distance_meters": 0,
+       "duration_seconds": 0,
+       "rpe": 9.5,
+       "custom_metric": 50
+      }
+     ]
+    }
+   ]
+  },
+  "UpdatedWorkout": {
+   "type": "updated",
+   "workout": {
+    "id": "b459cba5-cd6d-463c-abd6-54f8eafcadcb",
+    "title": "Morning Workout 💪",
+    "routine_id": "b459cba5-cd6d-463c-abd6-54f8eafcadcb",
+    "description": "Pushed myself to the limit today!",
+    "start_time": "2021-09-14T12:00:00Z",
+    "end_time": "2021-09-14T12:00:00Z",
+    "updated_at": "2021-09-14T12:00:00Z",
+    "created_at": "2021-09-14T12:00:00Z",
+    "exercises": [
+     {
+      "index": 0,
+      "title": "Bench Press (Barbell)",
+      "notes": "Paid closer attention to form today. Felt great!",
+      "exercise_template_id": "05293BCA",
+      "superset_id": 0,
+      "sets": [
+       {
+        "index": 0,
+        "type": "normal",
+        "weight_kg": 100,
+        "reps": 10,
+        "distance_meters": 0,
+        "duration_seconds": 0,
+        "rpe": 9.5,
+        "custom_metric": 50
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "DeletedWorkout": {
+   "type": "deleted",
+   "id": "efe6801c-4aee-4959-bcdd-fca3f272821b",
+   "deleted_at": "2021-09-13T12:00:00Z"
+  },
+  "PaginatedWorkoutEvents": {
+   "page": 1,
+   "page_count": 5,
+   "events": [
+    [
+     {
+      "type": "updated",
+      "workout": {
+       "id": "b459cba5-cd6d-463c-abd6-54f8eafcadcb",
+       "title": "Morning Workout 💪",
+       "routine_id": "b459cba5-cd6d-463c-abd6-54f8eafcadcb",
+       "description": "Pushed myself to the limit today!",
+       "start_time": "2021-09-14T12:00:00Z",
+       "end_time": "2021-09-14T12:00:00Z",
+       "updated_at": "2021-09-14T12:00:00Z",
+       "created_at": "2021-09-14T12:00:00Z",
+       "exercises": [
+        {
+         "index": 0,
+         "title": "Bench Press (Barbell)",
+         "notes": "Paid closer attention to form today. Felt great!",
+         "exercise_template_id": "05293BCA",
+         "superset_id": 0,
+         "sets": [
+          {
+           "index": 0,
+           "type": "normal",
+           "weight_kg": 100,
+           "reps": 10,
+           "distance_meters": 0,
+           "duration_seconds": 0,
+           "rpe": 9.5,
+           "custom_metric": 50
+          }
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "type": "deleted",
+      "id": "efe6801c-4aee-4959-bcdd-fca3f272821b",
+      "deleted_at": "2021-09-13T12:00:00Z"
+     }
+    ]
+   ]
+  }
+ },
+ "modelsSource": "https://api.hevyapp.com/docs (OpenAPI 0.0.1)"
 }
