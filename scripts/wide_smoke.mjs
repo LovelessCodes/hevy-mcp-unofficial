@@ -1,0 +1,22 @@
+import { Client } from "@modelcontextprotocol/sdk/client/index.js";
+import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
+const t = new StdioClientTransport({ command: "node", args: ["src/server.js"] });
+const c = new Client({ name: "wide", version: "0" });
+await c.connect(t);
+const call = async (n, a) => {
+  const r = await c.callTool({ name: n, arguments: a });
+  const txt = r.content?.[0]?.text ?? "";
+  console.log(`${r.isError ? "ERR " : "OK  "}${n}: ${txt.split("\n").slice(0,2).join(" ").slice(0,120)}`);
+  return txt;
+};
+await call("hevy_workout_count");
+await call("hevy_workouts_sync", {});
+await call("hevy_workout_get", { workoutId: "0b59bf37-9dab-44fe-8c6a-83318a4b0242" });
+await call("hevy_body_measurements_list");
+await call("hevy_user_preferences_get");
+await call("hevy_key_values_get");
+await call("hevy_coach_clients_list");
+await call("hevy_coach_team_get");
+await call("hevy_coach_conversations_list");
+await call("hevy_trainer_get_preferences");
+await c.close();

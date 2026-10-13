@@ -1,0 +1,3078 @@
+{
+ "generatedAt": "2026-10-13T14:30:07.424Z",
+ "groups": {
+  "trainer": [
+   {
+    "source": "trainer",
+    "name": "getTrainerProgram",
+    "verb": "GET",
+    "path": "/hevy_trainer/v3/program",
+    "params": [],
+    "query": [
+     "client_program_updated_at",
+     "client_next_workout_updated_at"
+    ],
+    "bodyKeys": []
+   },
+   {
+    "source": "trainer",
+    "name": "postTrainerProgram",
+    "verb": "POST",
+    "path": "/hevy_trainer/v3/program",
+    "params": [],
+    "bodyKeys": [
+     "program",
+     "deleteActiveProgram"
+    ]
+   },
+   {
+    "source": "trainer",
+    "name": "updateTrainerProgram",
+    "verb": "PUT",
+    "path": "/hevy_trainer/v3/program",
+    "params": [],
+    "bodyKeys": [
+     "program"
+    ]
+   },
+   {
+    "source": "trainer",
+    "name": "deleteTrainerProgram",
+    "verb": "DELETE",
+    "path": "/hevy_trainer/program",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "trainer",
+    "name": "migrateTrainerToV3",
+    "verb": "POST",
+    "path": "/hevy_trainer/v3/migrate",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "trainer",
+    "name": "getTrainerUserPreferences",
+    "verb": "GET",
+    "path": "/hevy_trainer/user_preferences",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "trainer",
+    "name": "postTrainerUserPreferences",
+    "verb": "POST",
+    "path": "/hevy_trainer/user_preferences",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "trainer",
+    "name": "getHevyTrainerProgramLegacy",
+    "verb": "GET",
+    "path": "/hevy_trainer/program",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "trainer",
+    "name": "postUserTrainingIntent",
+    "verb": "POST",
+    "path": "/user_training_intent",
+    "params": [],
+    "bodyKeys": []
+   }
+  ],
+  "public": [
+   {
+    "source": "public",
+    "name": "getUserInfo",
+    "verb": "GET",
+    "path": "/v1/user/info"
+   },
+   {
+    "source": "public",
+    "name": "listWorkouts",
+    "verb": "GET",
+    "path": "/v1/workouts",
+    "query": [
+     "page",
+     "pageSize"
+    ]
+   },
+   {
+    "source": "public",
+    "name": "getWorkoutCount",
+    "verb": "GET",
+    "path": "/v1/workouts/count"
+   },
+   {
+    "source": "public",
+    "name": "getWorkout",
+    "verb": "GET",
+    "path": "/v1/workouts/{workoutId}"
+   },
+   {
+    "source": "public",
+    "name": "createWorkout",
+    "verb": "POST",
+    "path": "/v1/workouts"
+   },
+   {
+    "source": "public",
+    "name": "updateWorkout",
+    "verb": "PUT",
+    "path": "/v1/workouts/{workoutId}"
+   },
+   {
+    "source": "public",
+    "name": "getWorkoutEvents",
+    "verb": "GET",
+    "path": "/v1/workouts/events",
+    "query": [
+     "since",
+     "page",
+     "pageSize"
+    ]
+   },
+   {
+    "source": "public",
+    "name": "listRoutines",
+    "verb": "GET",
+    "path": "/v1/routines",
+    "query": [
+     "page",
+     "pageSize"
+    ]
+   },
+   {
+    "source": "public",
+    "name": "getRoutine",
+    "verb": "GET",
+    "path": "/v1/routines/{routineId}"
+   },
+   {
+    "source": "public",
+    "name": "createRoutine",
+    "verb": "POST",
+    "path": "/v1/routines"
+   },
+   {
+    "source": "public",
+    "name": "updateRoutine",
+    "verb": "PUT",
+    "path": "/v1/routines/{routineId}"
+   },
+   {
+    "source": "public",
+    "name": "listExerciseTemplates",
+    "verb": "GET",
+    "path": "/v1/exercise_templates",
+    "query": [
+     "page",
+     "pageSize"
+    ]
+   },
+   {
+    "source": "public",
+    "name": "getExerciseTemplate",
+    "verb": "GET",
+    "path": "/v1/exercise_templates/{exerciseTemplateId}"
+   },
+   {
+    "source": "public",
+    "name": "listRoutineFolders",
+    "verb": "GET",
+    "path": "/v1/routine_folders",
+    "query": [
+     "page",
+     "pageSize"
+    ]
+   },
+   {
+    "source": "public",
+    "name": "getExerciseHistory",
+    "verb": "GET",
+    "path": "/v1/exercise_history/{exerciseTemplateId}",
+    "query": [
+     "start_date",
+     "end_date"
+    ]
+   },
+   {
+    "source": "public",
+    "name": "listBodyMeasurements",
+    "verb": "GET",
+    "path": "/v1/body_measurements",
+    "query": [
+     "page",
+     "pageSize"
+    ]
+   }
+  ],
+  "coach": [
+   {
+    "source": "coach",
+    "name": "deleteAccount",
+    "verb": "DELETE",
+    "path": "/coach/account",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/account\""
+   },
+   {
+    "source": "coach",
+    "name": "signup",
+    "verb": "POST",
+    "path": "/coach/signup",
+    "params": [],
+    "bodyKeys": [
+     "username",
+     "email",
+     "password",
+     "isTermsAccepted",
+     "inviteShortId"
+    ],
+    "raw": "\"coach/signup\",{username:e,email:t,password:n,isTermsAccepted:r,inviteShortId:i}"
+   },
+   {
+    "source": "coach",
+    "name": "login",
+    "verb": "POST",
+    "path": "/coach/login",
+    "params": [],
+    "bodyKeys": [
+     "emailOrUsername",
+     "password",
+     "inviteShortId"
+    ],
+    "raw": "\"coach/login\",{emailOrUsername:e,password:t,inviteShortId:n}"
+   },
+   {
+    "source": "coach",
+    "name": "authMigrate",
+    "verb": "POST",
+    "path": "/auth/migrate",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"auth/migrate\""
+   },
+   {
+    "source": "coach",
+    "name": "logout",
+    "verb": "DELETE",
+    "path": "/auth/session",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/auth/session\""
+   },
+   {
+    "source": "coach",
+    "name": "loginWithTempToken",
+    "verb": "POST",
+    "path": "/coach/login_with_temp_token",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/login_with_temp_token\",{},{headers:{\"temp-auth-token\":e}}"
+   },
+   {
+    "source": "coach",
+    "name": "signupFromTemporaryToken",
+    "verb": "POST",
+    "path": "/coach/signup_with_temp_token",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/signup_with_temp_token\",{},{headers:{\"temp-auth-token\":e}}"
+   },
+   {
+    "source": "coach",
+    "name": "getMetadataFromTemporaryToken",
+    "verb": "GET",
+    "path": "/user/coach_signup_user_metadata",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/user/coach_signup_user_metadata\",{headers:{\"temp-auth-token\":e}}"
+   },
+   {
+    "source": "coach",
+    "name": "signInWithGoogle",
+    "verb": "POST",
+    "path": "/coach/sign_in_with_google_web",
+    "params": [],
+    "bodyKeys": [
+     "code",
+     "invite_short_id"
+    ],
+    "raw": "\"/coach/sign_in_with_google_web\",{code:e,invite_short_id:t}"
+   },
+   {
+    "source": "coach",
+    "name": "signInWithApple",
+    "verb": "POST",
+    "path": "/coach/sign_in_with_apple_web",
+    "params": [],
+    "bodyKeys": [
+     "identityToken",
+     "email",
+     "invite_short_id"
+    ],
+    "raw": "\"/coach/sign_in_with_apple_web\",{identityToken:e,email:t,invite_short_id:n}"
+   },
+   {
+    "source": "coach",
+    "name": "generatePasswordRecoveryEmail",
+    "verb": "POST",
+    "path": "/recover_password",
+    "params": [],
+    "bodyKeys": [
+     "email"
+    ],
+    "raw": "\"recover_password\",{email:e}"
+   },
+   {
+    "source": "coach",
+    "name": "generateDownloadLinkEmail",
+    "verb": "POST",
+    "path": "/email_download_link",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"email_download_link\""
+   },
+   {
+    "source": "coach",
+    "name": "generateContinueOnDesktopEmail",
+    "verb": "POST",
+    "path": "/coach/send_continue_on_desktop_email",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"coach/send_continue_on_desktop_email\""
+   },
+   {
+    "source": "coach",
+    "name": "getAccount",
+    "verb": "GET",
+    "path": "/coach/account",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [
+     "Authorization"
+    ],
+    "raw": "\"coach/account\",e?{headers:{Authorization:\"Bearer \".concat(e)}}:void 0"
+   },
+   {
+    "source": "coach",
+    "name": "updateAccount",
+    "verb": "PUT",
+    "path": "/account",
+    "params": [],
+    "bodyKeys": [
+     "account"
+    ],
+    "raw": "\"account\",{account:e}"
+   },
+   {
+    "source": "coach",
+    "name": "getPresignedUrl",
+    "verb": "POST",
+    "path": "/presigned_url",
+    "params": [],
+    "bodyKeys": [
+     "file_name"
+    ],
+    "raw": "\"presigned_url\",{file_name:e}"
+   },
+   {
+    "source": "coach",
+    "name": "getPresignedExerciseVideoUrl",
+    "verb": "POST",
+    "path": "/coach/presigned_url_exercise_template_video",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/presigned_url_exercise_template_video\""
+   },
+   {
+    "source": "coach",
+    "name": "getPresignedChatFileUrl",
+    "verb": "POST",
+    "path": "/chat/presigned_url",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/chat/presigned_url\",e"
+   },
+   {
+    "source": "coach",
+    "name": "updateUsername",
+    "verb": "PUT",
+    "path": "/username",
+    "params": [],
+    "bodyKeys": [
+     "username"
+    ],
+    "raw": "\"username\",{username:e}"
+   },
+   {
+    "source": "coach",
+    "name": "updateEmail",
+    "verb": "PUT",
+    "path": "/email",
+    "params": [],
+    "bodyKeys": [
+     "email"
+    ],
+    "raw": "\"email\",{email:e}"
+   },
+   {
+    "source": "coach",
+    "name": "getUserPreferences",
+    "verb": "GET",
+    "path": "/user_preferences",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"user_preferences\""
+   },
+   {
+    "source": "coach",
+    "name": "updateUserPreferences",
+    "verb": "PUT",
+    "path": "/user_preferences",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"user_preferences\",e"
+   },
+   {
+    "source": "coach",
+    "name": "getClients",
+    "verb": "GET",
+    "path": "/coach/get_coachs_clients",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"coach/get_coachs_clients\""
+   },
+   {
+    "source": "coach",
+    "name": "getClientsWorkoutHistory",
+    "verb": "GET",
+    "path": "/coach/get_coachs_clients_workout_history_for_time_period",
+    "params": [],
+    "bodyKeys": [
+     "start_unix",
+     "end_unix"
+    ],
+    "raw": "\"coach/get_coachs_clients_workout_history_for_time_period\",{params:{start_unix:e,end_unix:t}}"
+   },
+   {
+    "source": "coach",
+    "name": "getClientExerciseHistory",
+    "verb": "GET",
+    "path": "/coach/clients_exercise_history_paged/",
+    "params": [
+     "e,\"/\"",
+     "t,\"/\"",
+     "null!=n?n:\"\""
+    ],
+    "bodyKeys": [],
+    "raw": "\"coach/clients_exercise_history_paged/\".concat(e,\"/\").concat(t,\"/\").concat(null!=n?n:\"\")"
+   },
+   {
+    "source": "coach",
+    "name": "getClientsWorkoutsPaged",
+    "verb": "GET",
+    "path": "/coach/clients_workouts_paged/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [
+     "params"
+    ],
+    "raw": "\"coach/clients_workouts_paged/\".concat(e),{params:t}"
+   },
+   {
+    "source": "coach",
+    "name": "getCoachInfoForInvite",
+    "verb": "GET",
+    "path": "/coach/team/invite/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"/coach/team/invite/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "createClientInvite",
+    "verb": "POST",
+    "path": "/coach/client_invite/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [
+     "targetCoachId"
+    ],
+    "raw": "\"coach/client_invite/\".concat(e),{targetCoachId:t}"
+   },
+   {
+    "source": "coach",
+    "name": "getCustomExerciseTemplates",
+    "verb": "GET",
+    "path": "/coach/custom_exercise_templates",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/custom_exercise_templates\""
+   },
+   {
+    "source": "coach",
+    "name": "postCustomExerciseTemplate",
+    "verb": "POST",
+    "path": "/custom_exercise_template",
+    "params": [],
+    "bodyKeys": [
+     "exercise"
+    ],
+    "raw": "\"custom_exercise_template\",{exercise:e}"
+   },
+   {
+    "source": "coach",
+    "name": "deleteCustomExerciseTemplate",
+    "verb": "DELETE",
+    "path": "/custom_exercise_template/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"/custom_exercise_template/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "updateCustomExerciseTemplate",
+    "verb": "PUT",
+    "path": "/custom_exercise_template/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [
+     "exercise"
+    ],
+    "raw": "\"/custom_exercise_template/\".concat(e),{exercise:t}"
+   },
+   {
+    "source": "coach",
+    "name": "postCoachRoutine",
+    "verb": "POST",
+    "path": "/coach/routine",
+    "params": [],
+    "bodyKeys": [
+     "routine"
+    ],
+    "raw": "\"/coach/routine\",{routine:e}"
+   },
+   {
+    "source": "coach",
+    "name": "createClientRoutine",
+    "verb": "POST",
+    "path": "/coach/client_routine/",
+    "params": [
+     "t"
+    ],
+    "bodyKeys": [
+     "routine"
+    ],
+    "raw": "\"/coach/client_routine/\".concat(t),{routine:e}"
+   },
+   {
+    "source": "coach",
+    "name": "updateCoachRoutine",
+    "verb": "PUT",
+    "path": "/coach/routine/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [
+     "routine"
+    ],
+    "raw": "\"/coach/routine/\".concat(e),{routine:t}"
+   },
+   {
+    "source": "coach",
+    "name": "deleteClientRoutine",
+    "verb": "DELETE",
+    "path": "/coach/client_routine/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"/coach/client_routine/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "deleteCoachRoutine",
+    "verb": "DELETE",
+    "path": "/coach/coach_routine/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"/coach/coach_routine/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "postProgram",
+    "verb": "POST",
+    "path": "/coach/create_program",
+    "params": [],
+    "bodyKeys": [
+     "program"
+    ],
+    "raw": "\"/coach/create_program\",{program:e}"
+   },
+   {
+    "source": "coach",
+    "name": "saveProgramAsTemplate",
+    "verb": "POST",
+    "path": "/coach/save_program",
+    "params": [],
+    "bodyKeys": [
+     "programId"
+    ],
+    "raw": "\"/coach/save_program\",{programId:e}"
+   },
+   {
+    "source": "coach",
+    "name": "duplicateProgram",
+    "verb": "POST",
+    "path": "/coach/duplicate_program",
+    "params": [],
+    "bodyKeys": [
+     "programId"
+    ],
+    "raw": "\"/coach/duplicate_program\",{programId:e}"
+   },
+   {
+    "source": "coach",
+    "name": "getPrograms",
+    "verb": "GET",
+    "path": "/coach/get_coachs_programs/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "e?\"coach/get_coachs_programs/\".concat(e):\"coach/get_coachs_programs/\""
+   },
+   {
+    "source": "coach",
+    "name": "getProgram",
+    "verb": "GET",
+    "path": "/coach/program/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"coach/program/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "deleteProgram",
+    "verb": "DELETE",
+    "path": "/coach/program/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"/coach/program/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "updateProgram",
+    "verb": "PUT",
+    "path": "/coach/update_program/",
+    "params": [
+     "t"
+    ],
+    "bodyKeys": [
+     "program"
+    ],
+    "raw": "\"/coach/update_program/\".concat(t),{program:e}"
+   },
+   {
+    "source": "coach",
+    "name": "postAddRoutineToProgram",
+    "verb": "POST",
+    "path": "/coach/add_routine_to_program",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/add_routine_to_program\",e"
+   },
+   {
+    "source": "coach",
+    "name": "assignProgramToClient",
+    "verb": "POST",
+    "path": "/coach/assign_program_to_clients",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/assign_program_to_clients\",e"
+   },
+   {
+    "source": "coach",
+    "name": "updateClientRoutine",
+    "verb": "PUT",
+    "path": "/coach/update_client_routine/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [
+     "routine"
+    ],
+    "raw": "\"/coach/update_client_routine/\".concat(e),{routine:t}"
+   },
+   {
+    "source": "coach",
+    "name": "updateCoachRoutineLocations",
+    "verb": "PUT",
+    "path": "/coach/routine_locations",
+    "params": [],
+    "bodyKeys": [
+     "locations"
+    ],
+    "raw": "\"/coach/routine_locations\",{locations:e}"
+   },
+   {
+    "source": "coach",
+    "name": "updateClientsRoutineLocations",
+    "verb": "PUT",
+    "path": "/coach/routine_locations/",
+    "params": [
+     "t"
+    ],
+    "bodyKeys": [
+     "locations"
+    ],
+    "raw": "\"/coach/routine_locations/\".concat(t),{locations:e}"
+   },
+   {
+    "source": "coach",
+    "name": "postRoutineCopy",
+    "verb": "POST",
+    "path": "/coach/routine_copy",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/routine_copy\",e"
+   },
+   {
+    "source": "coach",
+    "name": "postFeedback",
+    "verb": "POST",
+    "path": "/v2/feedback",
+    "params": [],
+    "bodyKeys": [
+     "feedback"
+    ],
+    "raw": "\"/v2/feedback\",{feedback:e}"
+   },
+   {
+    "source": "coach",
+    "name": "postWorkoutComment",
+    "verb": "POST",
+    "path": "/workout_comment",
+    "params": [],
+    "bodyKeys": [
+     "workoutId",
+     "comment"
+    ],
+    "raw": "\"workout_comment\",{workoutId:e,comment:t}"
+   },
+   {
+    "source": "coach",
+    "name": "deleteWorkoutComment",
+    "verb": "DELETE",
+    "path": "/workout_comment/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"workout_comment/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "getWorkoutComments",
+    "verb": "GET",
+    "path": "/workout_comments/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"workout_comments/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "likeWorkout",
+    "verb": "POST",
+    "path": "/workout/like/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"workout/like/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "unlikeWorkout",
+    "verb": "POST",
+    "path": "/workout/unlike/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"workout/unlike/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "getWorkout",
+    "verb": "GET",
+    "path": "/workout/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"workout/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "getClientExerciseSets",
+    "verb": "GET",
+    "path": "/coach/client_exercise_sets/",
+    "params": [
+     "e,\"/\"",
+     "t,\"/\"",
+     "n"
+    ],
+    "bodyKeys": [],
+    "raw": "\"/coach/client_exercise_sets/\".concat(e,\"/\").concat(t,\"/\").concat(n)"
+   },
+   {
+    "source": "coach",
+    "name": "getClientsRecentExercises",
+    "verb": "GET",
+    "path": "/coach/clients_exercises_by_date_used/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"/coach/clients_exercises_by_date_used/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "getClientWorkout",
+    "verb": "GET",
+    "path": "/coach/client_workout/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"coach/client_workout/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "postUpdateClientNotes",
+    "verb": "POST",
+    "path": "/coach/client_notes/",
+    "params": [
+     "t"
+    ],
+    "bodyKeys": [
+     "notes"
+    ],
+    "raw": "\"/coach/client_notes/\".concat(t),{notes:e}"
+   },
+   {
+    "source": "coach",
+    "name": "postUpdateJoinForm",
+    "verb": "POST",
+    "path": "/coach/join_form",
+    "params": [],
+    "bodyKeys": [
+     "message",
+     "bannerImageUrl"
+    ],
+    "raw": "\"/coach/join_form\",{message:e,bannerImageUrl:t}"
+   },
+   {
+    "source": "coach",
+    "name": "getCoachJoinFormMetadata",
+    "verb": "GET",
+    "path": "/coach/join_form_metadata/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"/coach/join_form_metadata/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "postCreateCoachLead",
+    "verb": "POST",
+    "path": "/coach/create_lead/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [
+     "leadFullname",
+     "leadEmail",
+     "leadMessage"
+    ],
+    "raw": "\"/coach/create_lead/\".concat(e),{leadFullname:t,leadEmail:n,leadMessage:r}"
+   },
+   {
+    "source": "coach",
+    "name": "getCoachLeads",
+    "verb": "GET",
+    "path": "/coach/leads",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/leads\""
+   },
+   {
+    "source": "coach",
+    "name": "acceptCoachLead",
+    "verb": "GET",
+    "path": "/coach/leads/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"/coach/leads/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "deleteCoachLead",
+    "verb": "DELETE",
+    "path": "/coach/leads/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"/coach/leads/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "searchUserByEmail",
+    "verb": "GET",
+    "path": "/coach/user_by_email/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"coach/user_by_email/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "searchUserByName",
+    "verb": "GET",
+    "path": "/coach/user_by_name/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"coach/user_by_name/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "getClientBodyMeasurements",
+    "verb": "GET",
+    "path": "/coach/client_body_measurements/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"/coach/client_body_measurements/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "postClientsBodyMeasurements",
+    "verb": "POST",
+    "path": "/coach/body_measurements/",
+    "params": [
+     "t"
+    ],
+    "bodyKeys": [
+     "measurements"
+    ],
+    "raw": "\"/coach/body_measurements/\".concat(t),{measurements:e}"
+   },
+   {
+    "source": "coach",
+    "name": "deleteClient",
+    "verb": "POST",
+    "path": "/coach/clients/delete/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"coach/clients/delete/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "getClientsActivitiesPaged",
+    "verb": "POST",
+    "path": "/coach/clients_activities_paged/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [
+     "forCoachIds"
+    ],
+    "raw": "\"coach/clients_activities_paged/\".concat(e),{forCoachIds:t}"
+   },
+   {
+    "source": "coach",
+    "name": "getWeeklyActiveClients",
+    "verb": "GET",
+    "path": "/coach/weekly_active_clients",
+    "params": [
+     "e?\"/\".concat(e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"coach/weekly_active_clients\".concat(e?\"/\".concat(e):\"\")"
+   },
+   {
+    "source": "coach",
+    "name": "getInvites",
+    "verb": "GET",
+    "path": "/coach/invites",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"coach/invites\""
+   },
+   {
+    "source": "coach",
+    "name": "getOrgInvites",
+    "verb": "GET",
+    "path": "/coach/team/invites",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"coach/team/invites\""
+   },
+   {
+    "source": "coach",
+    "name": "postCoachRole",
+    "verb": "POST",
+    "path": "/coach/update_coach_role",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/update_coach_role\",e"
+   },
+   {
+    "source": "coach",
+    "name": "postRemoveCoachFromTeam",
+    "verb": "POST",
+    "path": "/coach/remove_coach_from_team",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/remove_coach_from_team\",e"
+   },
+   {
+    "source": "coach",
+    "name": "postReassignClients",
+    "verb": "POST",
+    "path": "/coach/reassign_clients",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/reassign_clients\",e"
+   },
+   {
+    "source": "coach",
+    "name": "deleteClientInviteByShortId",
+    "verb": "DELETE",
+    "path": "/coach/invites/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"/coach/invites/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "createSampleClient",
+    "verb": "POST",
+    "path": "/coach/create_sample_client",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/create_sample_client\""
+   },
+   {
+    "source": "coach",
+    "name": "postChangePlan",
+    "verb": "POST",
+    "path": "/coach/change_plan",
+    "params": [],
+    "bodyKeys": [
+     "newPlanId",
+     "planUpdateType"
+    ],
+    "raw": "\"coach/change_plan\",{newPlanId:t,planUpdateType:e}"
+   },
+   {
+    "source": "coach",
+    "name": "startFreeTrial",
+    "verb": "POST",
+    "path": "/coach/start_free_trial",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/start_free_trial\""
+   },
+   {
+    "source": "coach",
+    "name": "getPlan",
+    "verb": "GET",
+    "path": "/coach/plan",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/plan\""
+   },
+   {
+    "source": "coach",
+    "name": "getAvailablePlans",
+    "verb": "GET",
+    "path": "/coach/available_plan_options",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/available_plan_options\""
+   },
+   {
+    "source": "coach",
+    "name": "getPaymentHistory",
+    "verb": "GET",
+    "path": "/coach/payment_history",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/payment_history\""
+   },
+   {
+    "source": "coach",
+    "name": "postExerciseCustomization",
+    "verb": "POST",
+    "path": "/coach/exercise_customization",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"coach/exercise_customization\",e"
+   },
+   {
+    "source": "coach",
+    "name": "deleteExerciseCustomizations",
+    "verb": "DELETE",
+    "path": "/coach/exercise_customization/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"coach/exercise_customization/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "getExerciseCustomizations",
+    "verb": "GET",
+    "path": "/coach/exercise_customizations",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/exercise_customizations\""
+   },
+   {
+    "source": "coach",
+    "name": "postSurveyResults",
+    "verb": "POST",
+    "path": "/coach/survey_answers",
+    "params": [],
+    "bodyKeys": [
+     "surveyAnswers"
+    ],
+    "raw": "\"/coach/survey_answers\",{surveyAnswers:e}"
+   },
+   {
+    "source": "coach",
+    "name": "postImpersonateUser",
+    "verb": "POST",
+    "path": "/impersonate_user/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"impersonate_user/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "validateAuthToken",
+    "verb": "POST",
+    "path": "/validate_auth_token",
+    "params": [],
+    "bodyKeys": [
+     "authToken",
+     "userMustBeCoach"
+    ],
+    "raw": "\"validate_auth_token\",{authToken:e,userMustBeCoach:!0}"
+   },
+   {
+    "source": "coach",
+    "name": "getSimplifiedLibraryRoutines",
+    "verb": "GET",
+    "path": "/coach/library_routines/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "e?\"/coach/library_routines/\".concat(e):\"/coach/library_routines/\""
+   },
+   {
+    "source": "coach",
+    "name": "getProgramRoutines",
+    "verb": "GET",
+    "path": "/coach/program/",
+    "params": [
+     "e,\"/routines\""
+    ],
+    "bodyKeys": [],
+    "raw": "\"/coach/program/\".concat(e,\"/routines\")"
+   },
+   {
+    "source": "coach",
+    "name": "getRoutine",
+    "verb": "GET",
+    "path": "/routine/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"/routine/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "getHevyRoutinesSync",
+    "verb": "POST",
+    "path": "/routines_sync_batch",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"routines_sync_batch\",e"
+   },
+   {
+    "source": "coach",
+    "name": "getHevyRoutineFolders",
+    "verb": "GET",
+    "path": "/routine_folders",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/routine_folders\""
+   },
+   {
+    "source": "coach",
+    "name": "getProgramFolders",
+    "verb": "GET",
+    "path": "/coach/program_folders",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/program_folders\""
+   },
+   {
+    "source": "coach",
+    "name": "createProgramFolder",
+    "verb": "POST",
+    "path": "/coach/program_folder",
+    "params": [],
+    "bodyKeys": [
+     "title"
+    ],
+    "raw": "\"/coach/program_folder\",{title:e}"
+   },
+   {
+    "source": "coach",
+    "name": "updateProgramFolder",
+    "verb": "PUT",
+    "path": "/coach/program_folder",
+    "params": [],
+    "bodyKeys": [
+     "title",
+     "folderId"
+    ],
+    "raw": "\"/coach/program_folder\",{title:e,folderId:t}"
+   },
+   {
+    "source": "coach",
+    "name": "deleteProgramFolder",
+    "verb": "DELETE",
+    "path": "/coach/program_folder/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"/coach/program_folder/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "updateProgramLocations",
+    "verb": "PUT",
+    "path": "/coach/program_locations",
+    "params": [],
+    "bodyKeys": [
+     "updates"
+    ],
+    "raw": "\"/coach/program_locations\",{updates:e}"
+   },
+   {
+    "source": "coach",
+    "name": "updateProgramFolderLocations",
+    "verb": "PUT",
+    "path": "/coach/program_folder_order",
+    "params": [],
+    "bodyKeys": [
+     "reorders"
+    ],
+    "raw": "\"/coach/program_folder_order\",{reorders:e}"
+   },
+   {
+    "source": "coach",
+    "name": "getConversations",
+    "verb": "GET",
+    "path": "/coach/conversations",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/conversations\""
+   },
+   {
+    "source": "coach",
+    "name": "postGetMessagesInConversation",
+    "verb": "POST",
+    "path": "/messages",
+    "params": [],
+    "bodyKeys": [
+     "limit",
+     "conversation_id",
+     "less_than_index"
+    ],
+    "raw": "\"/messages\",{limit:e,conversation_id:t,less_than_index:n}"
+   },
+   {
+    "source": "coach",
+    "name": "postCreateConversation",
+    "verb": "POST",
+    "path": "/coach/create_conversation",
+    "params": [],
+    "bodyKeys": [
+     "conversation_user_ids"
+    ],
+    "raw": "\"/coach/create_conversation\",{conversation_user_ids:[e,t]}"
+   },
+   {
+    "source": "coach",
+    "name": "getLatestMessageFromClientConversations",
+    "verb": "GET",
+    "path": "/coach/latest_conversation_messages",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/latest_conversation_messages\""
+   },
+   {
+    "source": "coach",
+    "name": "createMessage",
+    "verb": "POST",
+    "path": "/coach/message",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/message\",e"
+   },
+   {
+    "source": "coach",
+    "name": "postRegisterBrowserPush",
+    "verb": "POST",
+    "path": "/coach/register_browser_push",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/register_browser_push\",e"
+   },
+   {
+    "source": "coach",
+    "name": "postUnregisterBrowserPush",
+    "verb": "POST",
+    "path": "/coach/unregister_browser_push",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/unregister_browser_push\",e"
+   },
+   {
+    "source": "coach",
+    "name": "updateClientConfiguration",
+    "verb": "POST",
+    "path": "/coach/client_configuration",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/client_configuration\",e"
+   },
+   {
+    "source": "coach",
+    "name": "getConfig",
+    "verb": "GET",
+    "path": "/coach/config",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/config\""
+   },
+   {
+    "source": "coach",
+    "name": "setConfig",
+    "verb": "POST",
+    "path": "/coach/config",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/config\",e"
+   },
+   {
+    "source": "coach",
+    "name": "postSetConversationLastRead",
+    "verb": "POST",
+    "path": "/conversations/last_read_message_id",
+    "params": [],
+    "bodyKeys": [
+     "conversation_id",
+     "last_read_message_id"
+    ],
+    "raw": "\"/conversations/last_read_message_id\",{conversation_id:e,last_read_message_id:t}"
+   },
+   {
+    "source": "coach",
+    "name": "deleteMessage",
+    "verb": "DELETE",
+    "path": "/messages/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"/messages/\".concat(e)"
+   },
+   {
+    "source": "coach",
+    "name": "postGetDeletedMessagesInConversation",
+    "verb": "POST",
+    "path": "/deleted_messages",
+    "params": [],
+    "bodyKeys": [
+     "messages_deleted_since_time",
+     "conversation_id"
+    ],
+    "raw": "\"/deleted_messages\",{messages_deleted_since_time:t,conversation_id:e}"
+   },
+   {
+    "source": "coach",
+    "name": "postAuthenticatedBootstrapComplete",
+    "verb": "POST",
+    "path": "/coach/bootstrap_complete",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"coach/bootstrap_complete\""
+   },
+   {
+    "source": "coach",
+    "name": "getTeam",
+    "verb": "GET",
+    "path": "/coach/team",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/team\""
+   },
+   {
+    "source": "coach",
+    "name": "updateTeam",
+    "verb": "PUT",
+    "path": "/coach/team",
+    "params": [],
+    "bodyKeys": [
+     "title",
+     "image_url"
+    ],
+    "raw": "\"/coach/team\",{title:e,image_url:t}"
+   },
+   {
+    "source": "coach",
+    "name": "startTeam",
+    "verb": "POST",
+    "path": "/coach/team",
+    "params": [],
+    "bodyKeys": [
+     "title",
+     "image_url"
+    ],
+    "raw": "\"/coach/team\",{title:e,image_url:t}"
+   },
+   {
+    "source": "coach",
+    "name": "deleteTeam",
+    "verb": "DELETE",
+    "path": "/coach/team",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"/coach/team\""
+   },
+   {
+    "source": "coach",
+    "name": "updateUserKeyValues",
+    "verb": "PUT",
+    "path": "/user_key_values",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"user_key_values\",e"
+   },
+   {
+    "source": "coach",
+    "name": "getUserKeyValues",
+    "verb": "GET",
+    "path": "/user_key_values",
+    "params": [],
+    "bodyKeys": [],
+    "raw": "\"user_key_values\""
+   },
+   {
+    "source": "coach",
+    "name": "deleteUserKeyValue",
+    "verb": "DELETE",
+    "path": "/user_key_value/",
+    "params": [
+     "e"
+    ],
+    "bodyKeys": [],
+    "raw": "\"user_key_value/\".concat(e)"
+   }
+  ],
+  "mobile": [
+   {
+    "source": "mobile",
+    "name": "acceptCoachInvite",
+    "verb": "GET",
+    "path": "/accept_client_invite/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "acceptCoachInviteFromShortId",
+    "verb": "GET",
+    "path": "/accept_client_invite_with_short_id/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getGymActivityLeaderboard",
+    "verb": "GET",
+    "path": "/activity_leaderboard/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "?anon_0_",
+    "verb": "GET",
+    "path": "/articles?per_page=",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getUsernameAvailable",
+    "verb": "GET",
+    "path": "/availability",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getPresignedChatFileUrl",
+    "verb": "POST",
+    "path": "/chat/presigned_url",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "declineCoachInvite",
+    "verb": "DELETE",
+    "path": "/client_invites/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "declineCoachInviteWithShortId",
+    "verb": "DELETE",
+    "path": "/client_invites_with_short_id/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "removeCoachAccess",
+    "verb": "DELETE",
+    "path": "/coach",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postSetConversationLastRead",
+    "verb": "POST",
+    "path": "/conversations/last_read_message_id",
+    "params": [],
+    "bodyKeys": [
+     "conversation_id",
+     "last_read_message_id"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "postCreateConversation",
+    "verb": "POST",
+    "path": "/create_conversation",
+    "params": [],
+    "bodyKeys": [
+     "conversation_user_ids"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "deleteCustomExerciseTemplate",
+    "verb": "DELETE",
+    "path": "/custom_exercise_template/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postGetDeletedMessagesInConversation",
+    "verb": "POST",
+    "path": "/deleted_messages",
+    "params": [],
+    "bodyKeys": [
+     "messages_deleted_since_time",
+     "conversation_id"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "getGymExerciseLeaderboard",
+    "verb": "GET",
+    "path": "/exercise_leaderboard/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getCoachInfoForInvite",
+    "verb": "GET",
+    "path": "/invite/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "createMessage",
+    "verb": "POST",
+    "path": "/message",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postGetMessagesInConversation",
+    "verb": "POST",
+    "path": "/messages",
+    "params": [],
+    "bodyKeys": [
+     "less_than_index",
+     "conversation_id",
+     "limit"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "deleteMessage",
+    "verb": "DELETE",
+    "path": "/messages/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "deleteOAuthToken",
+    "verb": "DELETE",
+    "path": "/oauth/token/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "sendSignupVerificationEmail",
+    "verb": "POST",
+    "path": "/send_signup_verification_email",
+    "params": [],
+    "bodyKeys": [
+     "email"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "sendVerificationEmail",
+    "verb": "GET",
+    "path": "/send_verification_email",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "signupWithVerifiedEmail",
+    "verb": "POST",
+    "path": "/signup_with_verified_email",
+    "params": [],
+    "bodyKeys": [
+     "username",
+     "email",
+     "password",
+     "acceptedTerms",
+     "gympassUserId",
+     "verificationCode"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "getTemporaryAuthenticationToken",
+    "verb": "GET",
+    "path": "/temporary_authentication_token",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "cancelPaddlePlan",
+    "verb": "DELETE",
+    "path": "/user/paddle_plan",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getPaddleUrls",
+    "verb": "GET",
+    "path": "/user/paddle_urls",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getUserMedia",
+    "verb": "GET",
+    "path": "/user_media/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postVerifyEmailAddress",
+    "verb": "POST",
+    "path": "/verify_email_address",
+    "params": [],
+    "bodyKeys": [
+     "code"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "getGymWorkoutsPaged",
+    "verb": "GET",
+    "path": "/workouts_paged/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "acceptFollowRequest",
+    "verb": "POST",
+    "path": "/accept_follow_request",
+    "params": [],
+    "bodyKeys": [
+     "requestId"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "deleteAndroidPushToken",
+    "verb": "DELETE",
+    "path": "/android_push_token/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postAppLog",
+    "verb": "POST",
+    "path": "/app_log",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "createLinkedSession",
+    "verb": "POST",
+    "path": "/auth/create_linked_session",
+    "params": [],
+    "bodyKeys": [
+     "platform"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "createSavedAccount",
+    "verb": "POST",
+    "path": "/auth/create_saved_account",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "authMigrate",
+    "verb": "POST",
+    "path": "/auth/migrate",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "deleteSession",
+    "verb": "DELETE",
+    "path": "/auth/session",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getAvailableLoginMethods",
+    "verb": "GET",
+    "path": "/available_login_methods",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getBlockedUsers",
+    "verb": "GET",
+    "path": "/blocked_users",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getBodyMeasurements",
+    "verb": "GET",
+    "path": "/body_measurements",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "deleteBodyMeasurements",
+    "verb": "DELETE",
+    "path": "/body_measurements/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postBodyMeasurementsBatch",
+    "verb": "POST",
+    "path": "/body_measurements_batch",
+    "params": [],
+    "bodyKeys": [
+     "measurementsBatch"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "postBugReport",
+    "verb": "POST",
+    "path": "/bug-report",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "checkFacebookMigrationStatus",
+    "verb": "POST",
+    "path": "/check_facebook_migration_status",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getCoachInvites",
+    "verb": "GET",
+    "path": "/client_invites",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getCoach",
+    "verb": "GET",
+    "path": "/clients_coach",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getCoachesCustomExerciseTemplateCustomizations",
+    "verb": "GET",
+    "path": "/clients_exercise_customizations",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getProgram",
+    "verb": "GET",
+    "path": "/clients_program",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getComparableExerciseTemplates",
+    "verb": "GET",
+    "path": "/comparable_exercise_templates/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "deleteUserContactInfo",
+    "verb": "DELETE",
+    "path": "/contact_info",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getContactInfo",
+    "verb": "GET",
+    "path": "/contact_info",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "verifyPhoneNumber",
+    "verb": "POST",
+    "path": "/contact_info",
+    "params": [],
+    "bodyKeys": [
+     "phone_number",
+     "verification_code"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "getCurrentPromo",
+    "verb": "GET",
+    "path": "/current_promo",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postCustomExerciseTemplate",
+    "verb": "POST",
+    "path": "/custom_exercise_template",
+    "params": [],
+    "bodyKeys": [
+     "exercise"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "updateCustomExerciseTemplate",
+    "verb": "PUT",
+    "path": "/custom_exercise_template/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getCustomExerciseTemplates",
+    "verb": "GET",
+    "path": "/custom_exercise_templates",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "?anon_0_",
+    "verb": "GET",
+    "path": "/didPromptForAndroidPushPermission",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getDiscoverFeedPaged",
+    "verb": "GET",
+    "path": "/discover_feed_workouts_paged/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getBarPreferences",
+    "verb": "GET",
+    "path": "/exercise_bar_preferences",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "updatePreferedBarPreference",
+    "verb": "POST",
+    "path": "/exercise_bar_preferences",
+    "params": [],
+    "bodyKeys": [
+     "barId",
+     "exerciseTemplateId"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "getExerciseComparison",
+    "verb": "GET",
+    "path": "/exercise_comparison/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getExerciseLeaderboard",
+    "verb": "GET",
+    "path": "/exercise_leaderboard/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postExerciseTemplateUnit",
+    "verb": "POST",
+    "path": "/exercise_template_unit",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "deleteExerciseTemplateUnit",
+    "verb": "DELETE",
+    "path": "/exercise_template_unit/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getExerciseTemplateUnits",
+    "verb": "GET",
+    "path": "/exercise_template_units",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "deleteFacebookUserId",
+    "verb": "DELETE",
+    "path": "/facebook_user_id",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getFeedPaged",
+    "verb": "GET",
+    "path": "/feed_workouts_paged/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getFollowCounts",
+    "verb": "GET",
+    "path": "/follow_counts",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "deleteReceivedFollowRequest",
+    "verb": "DELETE",
+    "path": "/follow_request/received/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "deleteSentFollowRequest",
+    "verb": "DELETE",
+    "path": "/follow_request/sent/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "deleteFollower",
+    "verb": "DELETE",
+    "path": "/follower/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getFollowersPaged",
+    "verb": "GET",
+    "path": "/followers_paged/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "searchFollowers",
+    "verb": "GET",
+    "path": "/followers_search/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getFollowing",
+    "verb": "GET",
+    "path": "/following/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getGenerate204",
+    "verb": "GET",
+    "path": "/generate_204",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getUsersFromContacts",
+    "verb": "POST",
+    "path": "/get_users_from_contacts",
+    "params": [],
+    "bodyKeys": [
+     "contacts"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "getUsersFromFacebookFriends",
+    "verb": "POST",
+    "path": "/get_users_from_facebook_friends",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "?anon_0_",
+    "verb": "GET",
+    "path": "/gyms/popular",
+    "params": [],
+    "bodyKeys": [
+     "params"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "?anon_0_",
+    "verb": "GET",
+    "path": "/gyms/profile/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "?anon_0_",
+    "verb": "GET",
+    "path": "/gyms/search",
+    "params": [],
+    "bodyKeys": [
+     "params"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "getVisitedGyms",
+    "verb": "GET",
+    "path": "/gyms/visited",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "?anon_0_",
+    "verb": "GET",
+    "path": "/hasDismissedDragAndDropRoutineTip",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "",
+    "verb": "GET",
+    "path": "/hasDismissedHelloFromGuillemCell",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "",
+    "verb": "GET",
+    "path": "/hasDismissedHevyGPTCell",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "get",
+    "verb": "GET",
+    "path": "/hasDismissedRoutineModeWarning",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "deleteTrainerProgram",
+    "verb": "DELETE",
+    "path": "/hevy_trainer/program",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getTrainerUserPreferences",
+    "verb": "GET",
+    "path": "/hevy_trainer/user_preferences",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postTrainerUserPreferences",
+    "verb": "POST",
+    "path": "/hevy_trainer/user_preferences",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "migrateTrainerToV3",
+    "verb": "POST",
+    "path": "/hevy_trainer/v3/migrate",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getTrainerProgram",
+    "verb": "GET",
+    "path": "/hevy_trainer/v3/program",
+    "params": [],
+    "bodyKeys": [
+     "client_program_updated_at",
+     "client_next_workout_updated_at",
+     "params"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "postTrainerProgram",
+    "verb": "POST",
+    "path": "/hevy_trainer/v3/program",
+    "params": [],
+    "bodyKeys": [
+     "program",
+     "deleteActiveProgram"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "?anon_0_",
+    "verb": "PUT",
+    "path": "/hevy_trainer/v3/program",
+    "params": [],
+    "bodyKeys": [
+     "program"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "getImportDataStatus",
+    "verb": "GET",
+    "path": "/import_data",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "importWorkoutData",
+    "verb": "POST",
+    "path": "/import_data",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "deleteImportData",
+    "verb": "DELETE",
+    "path": "/import_data/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getImportReport",
+    "verb": "GET",
+    "path": "/import_data/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "deleteIOSPushToken",
+    "verb": "DELETE",
+    "path": "/ios_push_token/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "get",
+    "verb": "GET",
+    "path": "/isVolumeDoublingEnabledForAllExercisesByDefault",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "get",
+    "verb": "GET",
+    "path": "/isWearOSWatchLiveSyncEnabled",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "linkSocialAccount",
+    "verb": "POST",
+    "path": "/link_social_account",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "linkUserWithGympass",
+    "verb": "POST",
+    "path": "/link_with_gympass",
+    "params": [],
+    "bodyKeys": [
+     "gympassUserId"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "postLiveWorkoutComment",
+    "verb": "POST",
+    "path": "/live_workout_comment",
+    "params": [],
+    "bodyKeys": [
+     "workout_id",
+     "comment"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "deleteLiveWorkoutViewer",
+    "verb": "DELETE",
+    "path": "/live_workout_viewer",
+    "params": [],
+    "bodyKeys": [
+     "workout_id",
+     "data"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "postLiveWorkoutViewer",
+    "verb": "POST",
+    "path": "/live_workout_viewer",
+    "params": [],
+    "bodyKeys": [
+     "workout_id"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "loginWithSavedAccount",
+    "verb": "POST",
+    "path": "/login_with_saved_account",
+    "params": [],
+    "bodyKeys": [
+     "userId",
+     "secret"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "migrateFacebookLoginToPasswordLogin",
+    "verb": "POST",
+    "path": "/migrate_facebook_login_to_password_login",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getMinimumVersion",
+    "verb": "GET",
+    "path": "/minimum_app_version",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getMutualFollows",
+    "verb": "GET",
+    "path": "/mutual_followers/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postNetworkInfo",
+    "verb": "POST",
+    "path": "/network_info",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getPlateCalculatorBars",
+    "verb": "GET",
+    "path": "/plate_calculator_bar",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postPlateCalculatorBar",
+    "verb": "POST",
+    "path": "/plate_calculator_bar",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "deletePlateCalculatorBar",
+    "verb": "DELETE",
+    "path": "/plate_calculator_bar/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getPlateCalculatorPlates",
+    "verb": "GET",
+    "path": "/plate_calculator_plate",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postPlateCalculatorPlate",
+    "verb": "POST",
+    "path": "/plate_calculator_plate",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "deletePlateCalculatorPlate",
+    "verb": "DELETE",
+    "path": "/plate_calculator_plate/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getPresignedVideoUrls",
+    "verb": "POST",
+    "path": "/presigned_url_video",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getProductHuntStatus",
+    "verb": "GET",
+    "path": "/product_hunt_status",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getUserPushNotificationSettings",
+    "verb": "GET",
+    "path": "/push_notification_settings",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "updateUserPushNotificationSettings",
+    "verb": "PUT",
+    "path": "/push_notification_settings",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "generatePasswordRecoveryEmail",
+    "verb": "POST",
+    "path": "/recover_password",
+    "params": [],
+    "bodyKeys": [
+     "email"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "requestPasswordRecoveryForFacebookMigration",
+    "verb": "POST",
+    "path": "/request_password_recovery_for_facebook_migration",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "requestVerificationSMS",
+    "verb": "POST",
+    "path": "/request_verification_sms",
+    "params": [],
+    "bodyKeys": [
+     "phone_number"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "deleteRoutine",
+    "verb": "DELETE",
+    "path": "/routine/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getRoutine",
+    "verb": "GET",
+    "path": "/routine/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "updateRoutine",
+    "verb": "PUT",
+    "path": "/routine/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postRoutineCopy",
+    "verb": "POST",
+    "path": "/routine_copy",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postRoutineFolder",
+    "verb": "POST",
+    "path": "/routine_folder",
+    "params": [],
+    "bodyKeys": [
+     "folder"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "updateRoutineFolder",
+    "verb": "PUT",
+    "path": "/routine_folder",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "deleteRoutineFolder",
+    "verb": "DELETE",
+    "path": "/routine_folder/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "updateRoutineFolderOrder",
+    "verb": "PUT",
+    "path": "/routine_folder_order",
+    "params": [],
+    "bodyKeys": [
+     "reorders"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "updateRoutineLocations",
+    "verb": "PUT",
+    "path": "/routine_locations",
+    "params": [],
+    "bodyKeys": [
+     "locations"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "getRoutineWithShortId",
+    "verb": "GET",
+    "path": "/routine_with_short_id/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getRoutinesSync",
+    "verb": "POST",
+    "path": "/routines_sync_batch",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "handleMessage",
+    "verb": "GET",
+    "path": "/rrweb",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getSetCookie",
+    "verb": "GET",
+    "path": "/set-cookie",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getShareableFolderById",
+    "verb": "GET",
+    "path": "/shareable_folder/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getSimplifiedUserMuscleSplit",
+    "verb": "GET",
+    "path": "/simplified_user_muscle_split/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "disconnectStrava",
+    "verb": "DELETE",
+    "path": "/strava_auth",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "connectStrava",
+    "verb": "POST",
+    "path": "/strava_auth",
+    "params": [],
+    "bodyKeys": [
+     "authorizationCode"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "getStrengthLevel",
+    "verb": "GET",
+    "path": "/strength_level",
+    "params": [],
+    "bodyKeys": [
+     "params"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "submitEmailForFacebookLoginMigration",
+    "verb": "POST",
+    "path": "/submit_email_for_facebook_login_migration",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "deleteSubscription",
+    "verb": "DELETE",
+    "path": "/subscription/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "dismissSuggestedUser",
+    "verb": "DELETE",
+    "path": "/suggested_user/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getSuggestedUsers",
+    "verb": "GET",
+    "path": "/suggested_users",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "updatePassword",
+    "verb": "POST",
+    "path": "/update_password_authenticated",
+    "params": [],
+    "bodyKeys": [
+     "password"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "getUserAuthToken",
+    "verb": "GET",
+    "path": "/user_auth_token/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "deleteUserKeyValue",
+    "verb": "DELETE",
+    "path": "/user_key_value/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getUserKeyValues",
+    "verb": "GET",
+    "path": "/user_key_values",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "updateUserKeyValues",
+    "verb": "PUT",
+    "path": "/user_key_values",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postUserMetadata",
+    "verb": "POST",
+    "path": "/user_metadata",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "updateUserPreferences",
+    "verb": "PUT",
+    "path": "/user_preferences",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getUserProfile",
+    "verb": "GET",
+    "path": "/user_profile/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getUserProfileCompare",
+    "verb": "GET",
+    "path": "/user_profile_compare/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postUserTrainingIntent",
+    "verb": "POST",
+    "path": "/user_training_intent",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getUserWarmupCalculatorData",
+    "verb": "GET",
+    "path": "/user_warmup_calculator_data",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postUserWarmupCalculatorData",
+    "verb": "POST",
+    "path": "/user_warmup_calculator_data",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getUserWorkoutsPaged",
+    "verb": "GET",
+    "path": "/user_workouts_paged",
+    "params": [],
+    "bodyKeys": [
+     "params"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "userSearch",
+    "verb": "GET",
+    "path": "/users/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postFeedback",
+    "verb": "POST",
+    "path": "/v2/feedback",
+    "params": [],
+    "bodyKeys": [
+     "feedback",
+     "replyToEmail"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "getUserPreferences",
+    "verb": "GET",
+    "path": "/v2/user_preferences",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postWorkout",
+    "verb": "POST",
+    "path": "/v2/workout",
+    "params": [],
+    "bodyKeys": [
+     "workout",
+     "share_to_strava"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "updateWorkout",
+    "verb": "PUT",
+    "path": "/v2/workout/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "validateAuthToken",
+    "verb": "POST",
+    "path": "/validate_auth_token",
+    "params": [],
+    "bodyKeys": [
+     "authToken"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "updateWarmupSetsSetting",
+    "verb": "PUT",
+    "path": "/warmup_values_setting/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getWarmupSetsSettingRecalculateStatus",
+    "verb": "GET",
+    "path": "/warmup_values_setting/status",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "deleteWorkout",
+    "verb": "DELETE",
+    "path": "/workout/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getWorkout",
+    "verb": "GET",
+    "path": "/workout/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "likeWorkout",
+    "verb": "POST",
+    "path": "/workout/like/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "unlikeWorkout",
+    "verb": "POST",
+    "path": "/workout/unlike/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "postWorkoutComment",
+    "verb": "POST",
+    "path": "/workout_comment",
+    "params": [],
+    "bodyKeys": [
+     "workoutId",
+     "comment",
+     "replyingToCommentId"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "deleteWorkoutComment",
+    "verb": "DELETE",
+    "path": "/workout_comment/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "unlikeWorkoutComment",
+    "verb": "DELETE",
+    "path": "/workout_comment/like/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "likeWorkoutComment",
+    "verb": "POST",
+    "path": "/workout_comment/like/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getWorkoutCommentLikes",
+    "verb": "GET",
+    "path": "/workout_comment_likes/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getWorkoutComments",
+    "verb": "GET",
+    "path": "/workout_comments/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getWorkoutLikes",
+    "verb": "GET",
+    "path": "/workout_likes/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getWorkoutsBatch",
+    "verb": "GET",
+    "path": "/workouts_batch/",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getYearInReview",
+    "verb": "GET",
+    "path": "/year_in_review",
+    "params": [],
+    "bodyKeys": []
+   },
+   {
+    "source": "mobile",
+    "name": "getWorkoutsSync",
+    "verb": "POST",
+    "path": "/workouts_sync_batch",
+    "params": [],
+    "bodyKeys": [
+     "last_sync_timestamp"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "refreshAuthToken",
+    "verb": "POST",
+    "path": "/auth/refresh_token",
+    "params": [],
+    "bodyKeys": [
+     "refresh_token"
+    ]
+   },
+   {
+    "source": "mobile",
+    "name": "login",
+    "verb": "POST",
+    "path": "/auth/login",
+    "params": [],
+    "bodyKeys": [
+     "emailOrUsername",
+     "password"
+    ]
+   }
+  ]
+ }
+}

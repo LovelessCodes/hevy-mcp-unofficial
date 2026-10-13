@@ -1,0 +1,38 @@
+{
+  "name": "hevy-mcp-unofficial",
+  "version": "0.1.1",
+  "description": "Unofficial MCP server for Hevy: Trainer, Coach, private mobile API and public API endpoints, with session auto-refresh",
+  "type": "module",
+  "bin": {
+    "hevy-mcp-unofficial": "src/server.js"
+  },
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node src/server.js",
+    "build:endpoints": "node scripts/build-endpoints.mjs",
+    "smoke": "node scripts/smoke.js",
+    "prepublishOnly": "node --check src/server.js && node --check src/client.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "hevy",
+    "trainer",
+    "coach",
+    "fitness",
+    "workout",
+    "training"
+  ],
+  "author": "lovelesscx",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1"
+  }
+}

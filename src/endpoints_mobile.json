@@ -1,0 +1,1357 @@
+[
+ {
+  "verb": "GET",
+  "path": "/accept_client_invite/",
+  "function": "acceptCoachInvite",
+  "keys": [],
+  "func_id": 13193
+ },
+ {
+  "verb": "GET",
+  "path": "/accept_client_invite_with_short_id/",
+  "function": "acceptCoachInviteFromShortId",
+  "keys": [],
+  "func_id": 13194
+ },
+ {
+  "verb": "GET",
+  "path": "/activity_leaderboard/",
+  "function": "getGymActivityLeaderboard",
+  "keys": [],
+  "func_id": 13243
+ },
+ {
+  "verb": "GET",
+  "path": "/articles?per_page=",
+  "function": "?anon_0_",
+  "keys": [],
+  "func_id": 52444
+ },
+ {
+  "verb": "GET",
+  "path": "/availability",
+  "function": "getUsernameAvailable",
+  "keys": [],
+  "func_id": 13257
+ },
+ {
+  "verb": "POST",
+  "path": "/chat/presigned_url",
+  "function": "getPresignedChatFileUrl",
+  "keys": [],
+  "func_id": 13190
+ },
+ {
+  "verb": "DELETE",
+  "path": "/client_invites/",
+  "function": "declineCoachInvite",
+  "keys": [],
+  "func_id": 13195
+ },
+ {
+  "verb": "DELETE",
+  "path": "/client_invites_with_short_id/",
+  "function": "declineCoachInviteWithShortId",
+  "keys": [],
+  "func_id": 13196
+ },
+ {
+  "verb": "DELETE",
+  "path": "/coach",
+  "function": "removeCoachAccess",
+  "keys": [],
+  "func_id": 13197
+ },
+ {
+  "verb": "POST",
+  "path": "/conversations/last_read_message_id",
+  "function": "postSetConversationLastRead",
+  "keys": [
+   "conversation_id",
+   "last_read_message_id"
+  ],
+  "func_id": 13185
+ },
+ {
+  "verb": "POST",
+  "path": "/create_conversation",
+  "function": "postCreateConversation",
+  "keys": [
+   "conversation_user_ids"
+  ],
+  "func_id": 13186
+ },
+ {
+  "verb": "DELETE",
+  "path": "/custom_exercise_template/",
+  "function": "deleteCustomExerciseTemplate",
+  "keys": [],
+  "func_id": 13170
+ },
+ {
+  "verb": "POST",
+  "path": "/deleted_messages",
+  "function": "postGetDeletedMessagesInConversation",
+  "keys": [
+   "messages_deleted_since_time",
+   "conversation_id"
+  ],
+  "func_id": 13189
+ },
+ {
+  "verb": "GET",
+  "path": "/exercise_leaderboard/",
+  "function": "getGymExerciseLeaderboard",
+  "keys": [],
+  "func_id": 13244
+ },
+ {
+  "verb": "GET",
+  "path": "/invite/",
+  "function": "getCoachInfoForInvite",
+  "keys": [],
+  "func_id": 13192
+ },
+ {
+  "verb": "POST",
+  "path": "/message",
+  "function": "createMessage",
+  "keys": [],
+  "func_id": 13187
+ },
+ {
+  "verb": "POST",
+  "path": "/messages",
+  "function": "postGetMessagesInConversation",
+  "keys": [
+   "less_than_index",
+   "conversation_id",
+   "limit"
+  ],
+  "func_id": 13184
+ },
+ {
+  "verb": "DELETE",
+  "path": "/messages/",
+  "function": "deleteMessage",
+  "keys": [],
+  "func_id": 13188
+ },
+ {
+  "verb": "DELETE",
+  "path": "/oauth/token/",
+  "function": "deleteOAuthToken",
+  "keys": [],
+  "func_id": 13269
+ },
+ {
+  "verb": "POST",
+  "path": "/send_signup_verification_email",
+  "function": "sendSignupVerificationEmail",
+  "keys": [
+   "email"
+  ],
+  "func_id": 13272
+ },
+ {
+  "verb": "GET",
+  "path": "/send_verification_email",
+  "function": "sendVerificationEmail",
+  "keys": [],
+  "func_id": 13270
+ },
+ {
+  "verb": "POST",
+  "path": "/signup_with_verified_email",
+  "function": "signupWithVerifiedEmail",
+  "keys": [
+   "username",
+   "email",
+   "password",
+   "acceptedTerms",
+   "gympassUserId",
+   "verificationCode"
+  ],
+  "func_id": 13273
+ },
+ {
+  "verb": "GET",
+  "path": "/temporary_authentication_token",
+  "function": "getTemporaryAuthenticationToken",
+  "keys": [],
+  "func_id": 13183
+ },
+ {
+  "verb": "DELETE",
+  "path": "/user/paddle_plan",
+  "function": "cancelPaddlePlan",
+  "keys": [],
+  "func_id": 13099
+ },
+ {
+  "verb": "GET",
+  "path": "/user/paddle_urls",
+  "function": "getPaddleUrls",
+  "keys": [],
+  "func_id": 13098
+ },
+ {
+  "verb": "GET",
+  "path": "/user_media/",
+  "function": "getUserMedia",
+  "keys": [],
+  "func_id": 13114
+ },
+ {
+  "verb": "POST",
+  "path": "/verify_email_address",
+  "function": "postVerifyEmailAddress",
+  "keys": [
+   "code"
+  ],
+  "func_id": 13271
+ },
+ {
+  "verb": "GET",
+  "path": "/workouts_paged/",
+  "function": "getGymWorkoutsPaged",
+  "keys": [],
+  "func_id": 13242
+ },
+ {
+  "verb": "POST",
+  "path": "accept_follow_request",
+  "function": "acceptFollowRequest",
+  "keys": [
+   "requestId"
+  ],
+  "func_id": 13110
+ },
+ {
+  "verb": "DELETE",
+  "path": "android_push_token/",
+  "function": "deleteAndroidPushToken",
+  "keys": [],
+  "func_id": 13160
+ },
+ {
+  "verb": "POST",
+  "path": "app_log",
+  "function": "postAppLog",
+  "keys": [],
+  "func_id": 13155
+ },
+ {
+  "verb": "POST",
+  "path": "auth/create_linked_session",
+  "function": "createLinkedSession",
+  "keys": [
+   "platform"
+  ],
+  "func_id": 13081
+ },
+ {
+  "verb": "POST",
+  "path": "auth/create_saved_account",
+  "function": "createSavedAccount",
+  "keys": [],
+  "func_id": 13080
+ },
+ {
+  "verb": "POST",
+  "path": "auth/migrate",
+  "function": "authMigrate",
+  "keys": [],
+  "func_id": 13078
+ },
+ {
+  "verb": "DELETE",
+  "path": "auth/session",
+  "function": "deleteSession",
+  "keys": [],
+  "func_id": 13079
+ },
+ {
+  "verb": "GET",
+  "path": "available_login_methods",
+  "function": "getAvailableLoginMethods",
+  "keys": [],
+  "func_id": 13258
+ },
+ {
+  "verb": "GET",
+  "path": "blocked_users",
+  "function": "getBlockedUsers",
+  "keys": [],
+  "func_id": 13107
+ },
+ {
+  "verb": "GET",
+  "path": "body_measurements",
+  "function": "getBodyMeasurements",
+  "keys": [],
+  "func_id": 13171
+ },
+ {
+  "verb": "DELETE",
+  "path": "body_measurements/",
+  "function": "deleteBodyMeasurements",
+  "keys": [],
+  "func_id": 13172
+ },
+ {
+  "verb": "POST",
+  "path": "body_measurements_batch",
+  "function": "postBodyMeasurementsBatch",
+  "keys": [
+   "measurementsBatch"
+  ],
+  "func_id": 13173
+ },
+ {
+  "verb": "POST",
+  "path": "bug-report",
+  "function": "postBugReport",
+  "keys": [],
+  "func_id": 13156
+ },
+ {
+  "verb": "POST",
+  "path": "check_facebook_migration_status",
+  "function": "checkFacebookMigrationStatus",
+  "keys": [],
+  "func_id": 13262
+ },
+ {
+  "verb": "GET",
+  "path": "client_invites",
+  "function": "getCoachInvites",
+  "keys": [],
+  "func_id": 13191
+ },
+ {
+  "verb": "GET",
+  "path": "clients_coach",
+  "function": "getCoach",
+  "keys": [],
+  "func_id": 13182
+ },
+ {
+  "verb": "GET",
+  "path": "clients_exercise_customizations",
+  "function": "getCoachesCustomExerciseTemplateCustomizations",
+  "keys": [],
+  "func_id": 13222
+ },
+ {
+  "verb": "GET",
+  "path": "clients_program",
+  "function": "getProgram",
+  "keys": [],
+  "func_id": 13181
+ },
+ {
+  "verb": "GET",
+  "path": "comparable_exercise_templates/",
+  "function": "getComparableExerciseTemplates",
+  "keys": [],
+  "func_id": 13117
+ },
+ {
+  "verb": "DELETE",
+  "path": "contact_info",
+  "function": "deleteUserContactInfo",
+  "keys": [],
+  "func_id": 13245
+ },
+ {
+  "verb": "GET",
+  "path": "contact_info",
+  "function": "getContactInfo",
+  "keys": [],
+  "func_id": 13254
+ },
+ {
+  "verb": "POST",
+  "path": "contact_info",
+  "function": "verifyPhoneNumber",
+  "keys": [
+   "phone_number",
+   "verification_code"
+  ],
+  "func_id": 13256
+ },
+ {
+  "verb": "GET",
+  "path": "current_promo",
+  "function": "getCurrentPromo",
+  "keys": [],
+  "func_id": 13205
+ },
+ {
+  "verb": "POST",
+  "path": "custom_exercise_template",
+  "function": "postCustomExerciseTemplate",
+  "keys": [
+   "exercise"
+  ],
+  "func_id": 13163
+ },
+ {
+  "verb": "PUT",
+  "path": "custom_exercise_template/",
+  "function": "updateCustomExerciseTemplate",
+  "keys": [],
+  "func_id": 13168
+ },
+ {
+  "verb": "GET",
+  "path": "custom_exercise_templates",
+  "function": "getCustomExerciseTemplates",
+  "keys": [],
+  "func_id": 13169
+ },
+ {
+  "verb": "GET",
+  "path": "didPromptForAndroidPushPermission",
+  "function": "?anon_0_",
+  "keys": [],
+  "func_id": 32180
+ },
+ {
+  "verb": "GET",
+  "path": "discover_feed_workouts_paged/",
+  "function": "getDiscoverFeedPaged",
+  "keys": [],
+  "func_id": 13151
+ },
+ {
+  "verb": "GET",
+  "path": "exercise_bar_preferences",
+  "function": "getBarPreferences",
+  "keys": [],
+  "func_id": 13211
+ },
+ {
+  "verb": "POST",
+  "path": "exercise_bar_preferences",
+  "function": "updatePreferedBarPreference",
+  "keys": [
+   "barId",
+   "exerciseTemplateId"
+  ],
+  "func_id": 13212
+ },
+ {
+  "verb": "GET",
+  "path": "exercise_comparison/",
+  "function": "getExerciseComparison",
+  "keys": [],
+  "func_id": 13203
+ },
+ {
+  "verb": "GET",
+  "path": "exercise_leaderboard/",
+  "function": "getExerciseLeaderboard",
+  "keys": [],
+  "func_id": 13118
+ },
+ {
+  "verb": "POST",
+  "path": "exercise_template_unit",
+  "function": "postExerciseTemplateUnit",
+  "keys": [],
+  "func_id": 13223
+ },
+ {
+  "verb": "DELETE",
+  "path": "exercise_template_unit/",
+  "function": "deleteExerciseTemplateUnit",
+  "keys": [],
+  "func_id": 13224
+ },
+ {
+  "verb": "GET",
+  "path": "exercise_template_units",
+  "function": "getExerciseTemplateUnits",
+  "keys": [],
+  "func_id": 13219
+ },
+ {
+  "verb": "DELETE",
+  "path": "facebook_user_id",
+  "function": "deleteFacebookUserId",
+  "keys": [],
+  "func_id": 13261
+ },
+ {
+  "verb": "GET",
+  "path": "feed_workouts_paged/",
+  "function": "getFeedPaged",
+  "keys": [],
+  "func_id": 13150
+ },
+ {
+  "verb": "GET",
+  "path": "follow_counts",
+  "function": "getFollowCounts",
+  "keys": [],
+  "func_id": 13103
+ },
+ {
+  "verb": "DELETE",
+  "path": "follow_request/received/",
+  "function": "deleteReceivedFollowRequest",
+  "keys": [],
+  "func_id": 13111
+ },
+ {
+  "verb": "DELETE",
+  "path": "follow_request/sent/",
+  "function": "deleteSentFollowRequest",
+  "keys": [],
+  "func_id": 13112
+ },
+ {
+  "verb": "DELETE",
+  "path": "follower/",
+  "function": "deleteFollower",
+  "keys": [],
+  "func_id": 13127
+ },
+ {
+  "verb": "GET",
+  "path": "followers_paged/",
+  "function": "getFollowersPaged",
+  "keys": [],
+  "func_id": 13104
+ },
+ {
+  "verb": "GET",
+  "path": "followers_search/",
+  "function": "searchFollowers",
+  "keys": [],
+  "func_id": 13105
+ },
+ {
+  "verb": "GET",
+  "path": "following/",
+  "function": "getFollowing",
+  "keys": [],
+  "func_id": 13101
+ },
+ {
+  "verb": "GET",
+  "path": "generate_204",
+  "function": "getGenerate204",
+  "keys": [],
+  "func_id": 13087
+ },
+ {
+  "verb": "POST",
+  "path": "get_users_from_contacts",
+  "function": "getUsersFromContacts",
+  "keys": [
+   "contacts"
+  ],
+  "func_id": 13246
+ },
+ {
+  "verb": "POST",
+  "path": "get_users_from_facebook_friends",
+  "function": "getUsersFromFacebookFriends",
+  "keys": [],
+  "func_id": 13247
+ },
+ {
+  "verb": "GET",
+  "path": "gyms/popular",
+  "function": "?anon_0_",
+  "keys": [
+   "params"
+  ],
+  "func_id": 13231
+ },
+ {
+  "verb": "GET",
+  "path": "gyms/profile/",
+  "function": "?anon_0_",
+  "keys": [],
+  "func_id": 13240
+ },
+ {
+  "verb": "GET",
+  "path": "gyms/search",
+  "function": "?anon_0_",
+  "keys": [
+   "params"
+  ],
+  "func_id": 13235
+ },
+ {
+  "verb": "GET",
+  "path": "gyms/visited",
+  "function": "getVisitedGyms",
+  "keys": [],
+  "func_id": 13237
+ },
+ {
+  "verb": "GET",
+  "path": "hasDismissedDragAndDropRoutineTip",
+  "function": "?anon_0_",
+  "keys": [],
+  "func_id": 36979
+ },
+ {
+  "verb": "GET",
+  "path": "hasDismissedHelloFromGuillemCell",
+  "function": "",
+  "keys": [],
+  "func_id": 58552
+ },
+ {
+  "verb": "GET",
+  "path": "hasDismissedHevyGPTCell",
+  "function": "",
+  "keys": [],
+  "func_id": 58564
+ },
+ {
+  "verb": "GET",
+  "path": "hasDismissedRoutineModeWarning",
+  "function": "get",
+  "keys": [],
+  "func_id": 37123
+ },
+ {
+  "verb": "DELETE",
+  "path": "hevy_trainer/program",
+  "function": "deleteTrainerProgram",
+  "keys": [],
+  "func_id": 13281
+ },
+ {
+  "verb": "GET",
+  "path": "hevy_trainer/user_preferences",
+  "function": "getTrainerUserPreferences",
+  "keys": [],
+  "func_id": 13283
+ },
+ {
+  "verb": "POST",
+  "path": "hevy_trainer/user_preferences",
+  "function": "postTrainerUserPreferences",
+  "keys": [],
+  "func_id": 13284
+ },
+ {
+  "verb": "POST",
+  "path": "hevy_trainer/v3/migrate",
+  "function": "migrateTrainerToV3",
+  "keys": [],
+  "func_id": 13280
+ },
+ {
+  "verb": "GET",
+  "path": "hevy_trainer/v3/program",
+  "function": "getTrainerProgram",
+  "keys": [
+   "client_program_updated_at",
+   "client_next_workout_updated_at",
+   "params"
+  ],
+  "func_id": 13279
+ },
+ {
+  "verb": "POST",
+  "path": "hevy_trainer/v3/program",
+  "function": "postTrainerProgram",
+  "keys": [
+   "program",
+   "deleteActiveProgram"
+  ],
+  "func_id": 13274
+ },
+ {
+  "verb": "PUT",
+  "path": "hevy_trainer/v3/program",
+  "function": "?anon_0_",
+  "keys": [
+   "program"
+  ],
+  "func_id": 13277
+ },
+ {
+  "verb": "GET",
+  "path": "import_data",
+  "function": "getImportDataStatus",
+  "keys": [],
+  "func_id": 13207
+ },
+ {
+  "verb": "POST",
+  "path": "import_data",
+  "function": "importWorkoutData",
+  "keys": [],
+  "func_id": 13208
+ },
+ {
+  "verb": "DELETE",
+  "path": "import_data/",
+  "function": "deleteImportData",
+  "keys": [],
+  "func_id": 13210
+ },
+ {
+  "verb": "GET",
+  "path": "import_data/",
+  "function": "getImportReport",
+  "keys": [],
+  "func_id": 13209
+ },
+ {
+  "verb": "DELETE",
+  "path": "ios_push_token/",
+  "function": "deleteIOSPushToken",
+  "keys": [],
+  "func_id": 13158
+ },
+ {
+  "verb": "GET",
+  "path": "isVolumeDoublingEnabledForAllExercisesByDefault",
+  "function": "get",
+  "keys": [],
+  "func_id": 25189
+ },
+ {
+  "verb": "GET",
+  "path": "isWearOSWatchLiveSyncEnabled",
+  "function": "get",
+  "keys": [],
+  "func_id": 12946
+ },
+ {
+  "verb": "POST",
+  "path": "link_social_account",
+  "function": "linkSocialAccount",
+  "keys": [],
+  "func_id": 13259
+ },
+ {
+  "verb": "POST",
+  "path": "link_with_gympass",
+  "function": "linkUserWithGympass",
+  "keys": [
+   "gympassUserId"
+  ],
+  "func_id": 13286
+ },
+ {
+  "verb": "POST",
+  "path": "live_workout_comment",
+  "function": "postLiveWorkoutComment",
+  "keys": [
+   "workout_id",
+   "comment"
+  ],
+  "func_id": 13134
+ },
+ {
+  "verb": "DELETE",
+  "path": "live_workout_viewer",
+  "function": "deleteLiveWorkoutViewer",
+  "keys": [
+   "workout_id",
+   "data"
+  ],
+  "func_id": 13136
+ },
+ {
+  "verb": "POST",
+  "path": "live_workout_viewer",
+  "function": "postLiveWorkoutViewer",
+  "keys": [
+   "workout_id"
+  ],
+  "func_id": 13135
+ },
+ {
+  "verb": "POST",
+  "path": "login_with_saved_account",
+  "function": "loginWithSavedAccount",
+  "keys": [
+   "userId",
+   "secret"
+  ],
+  "func_id": 13082
+ },
+ {
+  "verb": "POST",
+  "path": "migrate_facebook_login_to_password_login",
+  "function": "migrateFacebookLoginToPasswordLogin",
+  "keys": [],
+  "func_id": 13260
+ },
+ {
+  "verb": "GET",
+  "path": "minimum_app_version",
+  "function": "getMinimumVersion",
+  "keys": [],
+  "func_id": 13206
+ },
+ {
+  "verb": "GET",
+  "path": "mutual_followers/",
+  "function": "getMutualFollows",
+  "keys": [],
+  "func_id": 13102
+ },
+ {
+  "verb": "POST",
+  "path": "network_info",
+  "function": "postNetworkInfo",
+  "keys": [],
+  "func_id": 13228
+ },
+ {
+  "verb": "GET",
+  "path": "plate_calculator_bar",
+  "function": "getPlateCalculatorBars",
+  "keys": [],
+  "func_id": 13213
+ },
+ {
+  "verb": "POST",
+  "path": "plate_calculator_bar",
+  "function": "postPlateCalculatorBar",
+  "keys": [],
+  "func_id": 13214
+ },
+ {
+  "verb": "DELETE",
+  "path": "plate_calculator_bar/",
+  "function": "deletePlateCalculatorBar",
+  "keys": [],
+  "func_id": 13215
+ },
+ {
+  "verb": "GET",
+  "path": "plate_calculator_plate",
+  "function": "getPlateCalculatorPlates",
+  "keys": [],
+  "func_id": 13216
+ },
+ {
+  "verb": "POST",
+  "path": "plate_calculator_plate",
+  "function": "postPlateCalculatorPlate",
+  "keys": [],
+  "func_id": 13217
+ },
+ {
+  "verb": "DELETE",
+  "path": "plate_calculator_plate/",
+  "function": "deletePlateCalculatorPlate",
+  "keys": [],
+  "func_id": 13218
+ },
+ {
+  "verb": "POST",
+  "path": "presigned_url_video",
+  "function": "getPresignedVideoUrls",
+  "keys": [],
+  "func_id": 13265
+ },
+ {
+  "verb": "GET",
+  "path": "product_hunt_status",
+  "function": "getProductHuntStatus",
+  "keys": [],
+  "func_id": 13282
+ },
+ {
+  "verb": "GET",
+  "path": "push_notification_settings",
+  "function": "getUserPushNotificationSettings",
+  "keys": [],
+  "func_id": 13161
+ },
+ {
+  "verb": "PUT",
+  "path": "push_notification_settings",
+  "function": "updateUserPushNotificationSettings",
+  "keys": [],
+  "func_id": 13162
+ },
+ {
+  "verb": "POST",
+  "path": "recover_password",
+  "function": "generatePasswordRecoveryEmail",
+  "keys": [
+   "email"
+  ],
+  "func_id": 13091
+ },
+ {
+  "verb": "POST",
+  "path": "request_password_recovery_for_facebook_migration",
+  "function": "requestPasswordRecoveryForFacebookMigration",
+  "keys": [],
+  "func_id": 13263
+ },
+ {
+  "verb": "POST",
+  "path": "request_verification_sms",
+  "function": "requestVerificationSMS",
+  "keys": [
+   "phone_number"
+  ],
+  "func_id": 13255
+ },
+ {
+  "verb": "DELETE",
+  "path": "routine/",
+  "function": "deleteRoutine",
+  "keys": [],
+  "func_id": 13137
+ },
+ {
+  "verb": "GET",
+  "path": "routine/",
+  "function": "getRoutine",
+  "keys": [],
+  "func_id": 13177
+ },
+ {
+  "verb": "PUT",
+  "path": "routine/",
+  "function": "updateRoutine",
+  "keys": [],
+  "func_id": 13140
+ },
+ {
+  "verb": "POST",
+  "path": "routine_copy",
+  "function": "postRoutineCopy",
+  "keys": [],
+  "func_id": 13139
+ },
+ {
+  "verb": "POST",
+  "path": "routine_folder",
+  "function": "postRoutineFolder",
+  "keys": [
+   "folder"
+  ],
+  "func_id": 13198
+ },
+ {
+  "verb": "PUT",
+  "path": "routine_folder",
+  "function": "updateRoutineFolder",
+  "keys": [],
+  "func_id": 13199
+ },
+ {
+  "verb": "DELETE",
+  "path": "routine_folder/",
+  "function": "deleteRoutineFolder",
+  "keys": [],
+  "func_id": 13200
+ },
+ {
+  "verb": "PUT",
+  "path": "routine_folder_order",
+  "function": "updateRoutineFolderOrder",
+  "keys": [
+   "reorders"
+  ],
+  "func_id": 13201
+ },
+ {
+  "verb": "PUT",
+  "path": "routine_locations",
+  "function": "updateRoutineLocations",
+  "keys": [
+   "locations"
+  ],
+  "func_id": 13202
+ },
+ {
+  "verb": "GET",
+  "path": "routine_with_short_id/",
+  "function": "getRoutineWithShortId",
+  "keys": [],
+  "func_id": 13178
+ },
+ {
+  "verb": "POST",
+  "path": "routines_sync_batch",
+  "function": "getRoutinesSync",
+  "keys": [],
+  "func_id": 13179
+ },
+ {
+  "verb": "GET",
+  "path": "rrweb",
+  "function": "handleMessage",
+  "keys": [],
+  "func_id": 17516
+ },
+ {
+  "verb": "GET",
+  "path": "set-cookie",
+  "function": "getSetCookie",
+  "keys": [],
+  "func_id": 22274
+ },
+ {
+  "verb": "GET",
+  "path": "shareable_folder/",
+  "function": "getShareableFolderById",
+  "keys": [],
+  "func_id": 13100
+ },
+ {
+  "verb": "GET",
+  "path": "simplified_user_muscle_split/",
+  "function": "getSimplifiedUserMuscleSplit",
+  "keys": [],
+  "func_id": 13115
+ },
+ {
+  "verb": "DELETE",
+  "path": "strava_auth",
+  "function": "disconnectStrava",
+  "keys": [],
+  "func_id": 13268
+ },
+ {
+  "verb": "POST",
+  "path": "strava_auth",
+  "function": "connectStrava",
+  "keys": [
+   "authorizationCode"
+  ],
+  "func_id": 13267
+ },
+ {
+  "verb": "GET",
+  "path": "strength_level",
+  "function": "getStrengthLevel",
+  "keys": [
+   "params"
+  ],
+  "func_id": 13119
+ },
+ {
+  "verb": "POST",
+  "path": "submit_email_for_facebook_login_migration",
+  "function": "submitEmailForFacebookLoginMigration",
+  "keys": [],
+  "func_id": 13264
+ },
+ {
+  "verb": "DELETE",
+  "path": "subscription/",
+  "function": "deleteSubscription",
+  "keys": [],
+  "func_id": 13126
+ },
+ {
+  "verb": "DELETE",
+  "path": "suggested_user/",
+  "function": "dismissSuggestedUser",
+  "keys": [],
+  "func_id": 13153
+ },
+ {
+  "verb": "GET",
+  "path": "suggested_users",
+  "function": "getSuggestedUsers",
+  "keys": [],
+  "func_id": 13152
+ },
+ {
+  "verb": "POST",
+  "path": "update_password_authenticated",
+  "function": "updatePassword",
+  "keys": [
+   "password"
+  ],
+  "func_id": 13092
+ },
+ {
+  "verb": "GET",
+  "path": "user_auth_token/",
+  "function": "getUserAuthToken",
+  "keys": [],
+  "func_id": 13253
+ },
+ {
+  "verb": "DELETE",
+  "path": "user_key_value/",
+  "function": "deleteUserKeyValue",
+  "keys": [],
+  "func_id": 13250
+ },
+ {
+  "verb": "GET",
+  "path": "user_key_values",
+  "function": "getUserKeyValues",
+  "keys": [],
+  "func_id": 13248
+ },
+ {
+  "verb": "PUT",
+  "path": "user_key_values",
+  "function": "updateUserKeyValues",
+  "keys": [],
+  "func_id": 13249
+ },
+ {
+  "verb": "POST",
+  "path": "user_metadata",
+  "function": "postUserMetadata",
+  "keys": [],
+  "func_id": 13227
+ },
+ {
+  "verb": "PUT",
+  "path": "user_preferences",
+  "function": "updateUserPreferences",
+  "keys": [],
+  "func_id": 13096
+ },
+ {
+  "verb": "GET",
+  "path": "user_profile/",
+  "function": "getUserProfile",
+  "keys": [],
+  "func_id": 13113
+ },
+ {
+  "verb": "GET",
+  "path": "user_profile_compare/",
+  "function": "getUserProfileCompare",
+  "keys": [],
+  "func_id": 13116
+ },
+ {
+  "verb": "POST",
+  "path": "user_training_intent",
+  "function": "postUserTrainingIntent",
+  "keys": [],
+  "func_id": 13285
+ },
+ {
+  "verb": "GET",
+  "path": "user_warmup_calculator_data",
+  "function": "getUserWarmupCalculatorData",
+  "keys": [],
+  "func_id": 13220
+ },
+ {
+  "verb": "POST",
+  "path": "user_warmup_calculator_data",
+  "function": "postUserWarmupCalculatorData",
+  "keys": [],
+  "func_id": 13221
+ },
+ {
+  "verb": "GET",
+  "path": "user_workouts_paged",
+  "function": "getUserWorkoutsPaged",
+  "keys": [
+   "params"
+  ],
+  "func_id": 13120
+ },
+ {
+  "verb": "GET",
+  "path": "users/",
+  "function": "userSearch",
+  "keys": [],
+  "func_id": 13121
+ },
+ {
+  "verb": "POST",
+  "path": "v2/feedback",
+  "function": "postFeedback",
+  "keys": [
+   "feedback",
+   "replyToEmail"
+  ],
+  "func_id": 13154
+ },
+ {
+  "verb": "GET",
+  "path": "v2/user_preferences",
+  "function": "getUserPreferences",
+  "keys": [],
+  "func_id": 13095
+ },
+ {
+  "verb": "POST",
+  "path": "v2/workout",
+  "function": "postWorkout",
+  "keys": [
+   "workout",
+   "share_to_strava"
+  ],
+  "func_id": 13130
+ },
+ {
+  "verb": "PUT",
+  "path": "v2/workout/",
+  "function": "updateWorkout",
+  "keys": [],
+  "func_id": 13141
+ },
+ {
+  "verb": "POST",
+  "path": "validate_auth_token",
+  "function": "validateAuthToken",
+  "keys": [
+   "authToken"
+  ],
+  "func_id": 13077
+ },
+ {
+  "verb": "PUT",
+  "path": "warmup_values_setting/",
+  "function": "updateWarmupSetsSetting",
+  "keys": [],
+  "func_id": 13251
+ },
+ {
+  "verb": "GET",
+  "path": "warmup_values_setting/status",
+  "function": "getWarmupSetsSettingRecalculateStatus",
+  "keys": [],
+  "func_id": 13252
+ },
+ {
+  "verb": "DELETE",
+  "path": "workout/",
+  "function": "deleteWorkout",
+  "keys": [],
+  "func_id": 13142
+ },
+ {
+  "verb": "GET",
+  "path": "workout/",
+  "function": "getWorkout",
+  "keys": [],
+  "func_id": 13146
+ },
+ {
+  "verb": "POST",
+  "path": "workout/like/",
+  "function": "likeWorkout",
+  "keys": [],
+  "func_id": 13143
+ },
+ {
+  "verb": "POST",
+  "path": "workout/unlike/",
+  "function": "unlikeWorkout",
+  "keys": [],
+  "func_id": 13144
+ },
+ {
+  "verb": "POST",
+  "path": "workout_comment",
+  "function": "postWorkoutComment",
+  "keys": [
+   "workoutId",
+   "comment",
+   "replyingToCommentId"
+  ],
+  "func_id": 13164
+ },
+ {
+  "verb": "DELETE",
+  "path": "workout_comment/",
+  "function": "deleteWorkoutComment",
+  "keys": [],
+  "func_id": 13149
+ },
+ {
+  "verb": "DELETE",
+  "path": "workout_comment/like/",
+  "function": "unlikeWorkoutComment",
+  "keys": [],
+  "func_id": 13166
+ },
+ {
+  "verb": "POST",
+  "path": "workout_comment/like/",
+  "function": "likeWorkoutComment",
+  "keys": [],
+  "func_id": 13165
+ },
+ {
+  "verb": "GET",
+  "path": "workout_comment_likes/",
+  "function": "getWorkoutCommentLikes",
+  "keys": [],
+  "func_id": 13167
+ },
+ {
+  "verb": "GET",
+  "path": "workout_comments/",
+  "function": "getWorkoutComments",
+  "keys": [],
+  "func_id": 13148
+ },
+ {
+  "verb": "GET",
+  "path": "workout_likes/",
+  "function": "getWorkoutLikes",
+  "keys": [],
+  "func_id": 13145
+ },
+ {
+  "verb": "GET",
+  "path": "workouts_batch/",
+  "function": "getWorkoutsBatch",
+  "keys": [],
+  "func_id": 13175
+ },
+ {
+  "verb": "GET",
+  "path": "year_in_review",
+  "function": "getYearInReview",
+  "keys": [],
+  "func_id": 13129
+ },
+ {
+  "verb": "POST",
+  "path": "/workouts_sync_batch",
+  "function": "getWorkoutsSync",
+  "keys": [
+   "last_sync_timestamp"
+  ],
+  "func_id": 13176
+ },
+ {
+  "verb": "POST",
+  "path": "/auth/refresh_token",
+  "function": "refreshAuthToken",
+  "keys": [
+   "refresh_token"
+  ],
+  "func_id": 0
+ },
+ {
+  "verb": "POST",
+  "path": "/auth/login",
+  "function": "login",
+  "keys": [
+   "emailOrUsername",
+   "password"
+  ],
+  "func_id": 0
+ }
+]
